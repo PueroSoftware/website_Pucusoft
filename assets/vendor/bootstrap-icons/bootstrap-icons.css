@@ -378,7 +378,7 @@ url("./fonts/bootstrap-icons.woff?2820a3852bdb9a5832199cc61cec4e65") format("wof
 .bi-chat-right::before { content: "\f25d"; }
 .bi-chat-square-dots-fill::before { content: "\f25e"; }
 .bi-chat-square-dots::before { content: "\f25f"; }
-.bi-chat-square-fill::before { content: "\f260"; }
+.bi-chat-square-fill::before { content: "\f500"; }
 .bi-chat-square-quote-fill::before { content: "\f261"; }
 .bi-chat-square-quote::before { content: "\f262"; }
 .bi-chat-square-text-fill::before { content: "\f263"; }
