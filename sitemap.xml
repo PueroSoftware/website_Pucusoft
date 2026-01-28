@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- Página Principal -->
+  <url>
+    <loc>https://pucusoft.com/</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="es-PE" href="https://pucusoft.com/" />
+    <xhtml:link rel="alternate" hreflang="es-EC" href="https://pucusoft.com/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://pucusoft.com/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pucusoft.com/" />
+  </url>
+
+  <!-- Sección Servicios -->
+  <url>
+    <loc>https://pucusoft.com/#services</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es-PE" href="https://pucusoft.com/#services" />
+    <xhtml:link rel="alternate" hreflang="es-EC" href="https://pucusoft.com/#services" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://pucusoft.com/#services" />
+  </url>
+
+  <!-- Sección Sobre Nosotros -->
+  <url>
+    <loc>https://pucusoft.com/#about</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es-PE" href="https://pucusoft.com/#about" />
+    <xhtml:link rel="alternate" hreflang="es-EC" href="https://pucusoft.com/#about" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://pucusoft.com/#about" />
+  </url>
+
+  <!-- Sección Portafolio -->
+  <url>
+    <loc>https://pucusoft.com/#portfolio</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es-PE" href="https://pucusoft.com/#portfolio" />
+    <xhtml:link rel="alternate" hreflang="es-EC" href="https://pucusoft.com/#portfolio" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://pucusoft.com/#portfolio" />
+  </url>
+
+  <!-- Sección Precios -->
+  <url>
+    <loc>https://pucusoft.com/#pricing</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es-PE" href="https://pucusoft.com/#pricing" />
+    <xhtml:link rel="alternate" hreflang="es-EC" href="https://pucusoft.com/#pricing" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://pucusoft.com/#pricing" />
+  </url>
+
+  <!-- Proyectos a Medida -->
+  <url>
+    <loc>https://pucusoft.com/#custom-projects</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es-PE" href="https://pucusoft.com/#custom-projects" />
+    <xhtml:link rel="alternate" hreflang="es-EC" href="https://pucusoft.com/#custom-projects" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://pucusoft.com/#custom-projects" />
+  </url>
+
+  <!-- Proyectos en Vivo -->
+  <url>
+    <loc>https://pucusoft.com/#github-projects</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es-PE" href="https://pucusoft.com/#github-projects" />
+    <xhtml:link rel="alternate" hreflang="es-EC" href="https://pucusoft.com/#github-projects" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://pucusoft.com/#github-projects" />
+  </url>
+
+  <!-- Contacto -->
+  <url>
+    <loc>https://pucusoft.com/#contact</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es-PE" href="https://pucusoft.com/#contact" />
+    <xhtml:link rel="alternate" hreflang="es-EC" href="https://pucusoft.com/#contact" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://pucusoft.com/#contact" />
+  </url>
+
+</urlset>

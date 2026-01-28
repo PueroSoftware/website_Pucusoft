@@ -1,0 +1,39 @@
+User-agent: *
+Allow: /
+
+# Priorizar contenido principal
+Allow: /assets/
+Allow: /assets/css/
+Allow: /assets/js/
+Allow: /assets/img/
+Allow: /assets/vendor/
+
+# Bloquear archivos temporales y de sistema
+Disallow: /temp/
+Disallow: /.git/
+Disallow: /.gitignore
+Disallow: /node_modules/
+Disallow: /package.json
+Disallow: /package-lock.json
+Disallow: /README.md
+Disallow: /sitemap.xml
+Disallow: /robots.txt
+
+# Optimizado para motores de búsqueda regionales
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Tiempo de crawl (opcional)
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://pucusoft.com/sitemap.xml
+
+# Información adicional para SEO regional
+# Perú y Ecuador como mercados principales
