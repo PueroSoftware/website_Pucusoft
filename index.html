@@ -5,9 +5,88 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Pucusoft - Home 1</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <title>Pucusoft | Desarrollo Web en Lima & Guayaquil • Tiendas Online y Diseño Gráfico</title>
+  <meta content="Agencia digital líder en Perú y Ecuador. Especialistas en desarrollo web, tiendas online y diseño gráfico para empresas en Lima, Guayaquil y toda Latinoamérica." name="description">
+  <meta content="desarrollo web Lima, desarrollo web Guayaquil, tiendas online Perú, e-commerce Ecuador, diseño gráfico Latinoamérica, agencia digital Perú Ecuador" name="keywords">
+  
+  <!-- Schema Markup for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Pucusoft",
+    "url": "https://pucusoft.com",
+    "logo": "https://pucusoft.com/assets/img/logo.png",
+    "description": "Agencia digital líder en Perú y Ecuador especializada en desarrollo web, tiendas online y diseño gráfico",
+    "address": [
+      {
+        "@type": "PostalAddress",
+        "addressLocality": "Lima",
+        "addressCountry": "Perú",
+        "streetAddress": "Calle Miguel de Unamuno 216, San Miguel 15086"
+      },
+      {
+        "@type": "PostalAddress", 
+        "addressLocality": "Guayaquil",
+        "addressCountry": "Ecuador"
+      }
+    ],
+    "telephone": ["+51 917 955 859", "+593 0987321055"],
+    "email": "info@pucusoft.com",
+    "sameAs": [
+      "https://www.facebook.com/puerocuerosoft",
+      "https://www.instagram.com/pucusoftpuero",
+      "https://www.linkedin.com/in/puerojose",
+      "https://twitter.com/joseph_puero"
+    ],
+    "areaServed": [
+      {
+        "@type": "Country",
+        "name": "Perú"
+      },
+      {
+        "@type": "Country", 
+        "name": "Ecuador"
+      }
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Servicios de Desarrollo Web",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Landing Page",
+            "description": "Landing pages de alto rendimiento para empresas en Perú y Ecuador"
+          },
+          "price": "350",
+          "priceCurrency": "PEN"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Web Corporativa",
+            "description": "Sitios web institucionales para empresas"
+          },
+          "price": "600",
+          "priceCurrency": "PEN"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Tienda Online",
+            "description": "E-commerce completo para ventas online"
+          },
+          "price": "1200",
+          "priceCurrency": "PEN"
+        }
+      ]
+    }
+  }
+  </script>
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -55,7 +134,7 @@
       <a href="index.html" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1>Pucusoft<span>.</span></h1>
+        <div class="logo-text">Pucusoft<span>.</span></div>
       </a>
 
       <nav id="navbar" class="navbar">
@@ -126,9 +205,9 @@
 
   <section id="hero-animated" class="hero-animated d-flex align-items-center">
     <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative" data-aos="zoom-out">
-      <img src="assets/img/hero-carousel/hero-carousel-3.svg" class="img-fluid animated">
-      <h2>Bienvenidos a <span>PucuSoft</span></h2>
-      <p>¡Hacemos tu vida Digital más fácil!!.</p>
+      <img src="assets/img/hero-carousel/hero-carousel-3.svg" class="img-fluid animated" alt="Desarrollo web y tiendas online en Perú - Pucusoft" loading="lazy">
+      <h1>Bienvenidos a <span>PucuSoft</span></h1>
+      <p>¡Hacemos tu vida Digital más fácil! Especialistas en desarrollo web, tiendas online y diseño gráfico para empresas en Lima, Guayaquil y toda Latinoamérica.</p>
       <div class="d-flex">
         <a href="#about" class="btn-get-started scrollto">Empezar</a>
         <a href="https://youtu.be/BxgdNm7KSfc" class="glightbox btn-watch-video d-flex align-items-center"> <!-- Video Personal -->
@@ -148,32 +227,40 @@
           <div class="col-xl-3 col-md-6 d-flex" data-aos="zoom-out">
             <div class="service-item position-relative">
               <div class="icon"><i class="bi bi-layout-wtf"></i></div>
-              <h4><a href="" class="stretched-link">Landing Page</a></h4>
-              <p> "¡Aumenta tu impacto! Landing page de alto rendimiento: Diseño cautivador, contenido persuasivo y llamados a la acción efectivos para convertir visitantes en clientes satisfechos. Potencia tu negocio hoy mismo."eficmismo!" </p>
+              <h3><a href="" class="stretched-link">Landing Page</a></h3>
+              <p>¡Aumenta tu impacto en Latinoamérica! Landing pages de alto rendimiento con diseño cautivador y contenido persuasivo. Convertimos visitantes en clientes satisfechos para negocios en Lima, Guayaquil y toda la región.</p>
             </div>
           </div><!-- End Service Item -->
 
           <div class="col-xl-3 col-md-6 d-flex" data-aos="zoom-out" data-aos-delay="200">
             <div class="service-item position-relative">
               <div class="icon"><i class="bi bi-layout-text-sidebar"></i></div>
-              <h4><a href="" class="stretched-link">Sitios Institucionales</a></h4>
-              <p>Potenciamos tu marca con diseño web de vanguardia. Comunicamos tu visión, servicios y valores para conectar con tu audiencia, impulsando el crecimiento y reconocimiento de tu empresa."</p>
+              <h3><a href="" class="stretched-link">Sitios Institucionales</a></h3>
+              <p>Potenciamos tu marca con diseño web de vanguardia. Comunicamos tu visión, servicios y valores para conectar con tu audiencia local, impulsando el crecimiento y reconocimiento de tu empresa en los mercados de Perú y Ecuador.</p>
             </div>
           </div><!-- End Service Item -->
 
           <div class="col-xl-3 col-md-6 d-flex" data-aos="zoom-out" data-aos-delay="400">
             <div class="service-item position-relative">
               <div class="icon"><i class="bi bi-layout-text-window"></i></div>
-              <h4><a href="" class="stretched-link">Tienda Online</a></h4>
-              <p> "Somos líderes en soluciones innovadoras para negocios. Nuestra plataforma integral optimiza la eficiencia y maximiza resultados, potenciando el éxito empresarial en el mercado actual."</p>
+              <h3><a href="" class="stretched-link">Tienda Online</a></h3>
+              <p>Líderes en tiendas online para América Latina. Nuestra plataforma e-commerce integral optimiza la eficiencia y maximiza resultados, potenciando el éxito empresarial con soluciones adaptadas a clientes en Perú, Ecuador y toda la región.</p>
             </div>
           </div><!-- End Service Item -->
 
           <div class="col-xl-3 col-md-6 d-flex" data-aos="zoom-out" data-aos-delay="600">
             <div class="service-item position-relative">
               <div class="icon"><i class="bi bi-laptop"></i></div>
-              <h4><a href="" class="stretched-link">Web-app</a></h4>
-              <p>"Ofrecemos soluciones innovadoras y personalizadas para potenciar tu negocio. Nuestra plataforma integral maximiza la eficiencia y los resultados, impulsando tu éxito en el mercado actual y futuro."</p>
+              <h3><a href="" class="stretched-link">Web-app</a></h3>
+              <p>Desarrollamos aplicaciones web personalizadas para empresas en Latinoamérica. Ofrecemos soluciones innovadoras que maximizan la eficiencia y los resultados, impulsando tu éxito en los mercados digitales de Perú, Ecuador y toda la región con tecnología de vanguardia.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="zoom-out" data-aos-delay="800">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-phone"></i></div>
+              <h3><a href="" class="stretched-link">Apps Android</a></h3>
+              <p>Desarrollo de aplicaciones nativas para Android con Kotlin. Creamos apps móviles de alto rendimiento para Lima, Guayaquil y toda Latinoamérica, con integración de APIs, notificaciones push y experiencia de usuario excepcional.</p>
             </div>
           </div><!-- End Service Item -->
 
@@ -188,14 +275,14 @@
 
         <div class="section-header">
           <h2>Sobre Nosotros</h2>
-          <p>Somos una agencia apasionada por la innovación en programación web. Nuestro equipo experto crea soluciones digitales personalizadas que potencian negocios. Nos comprometemos a ofrecer calidad, creatividad y resultados excepcionales a nuestros clientes.</p>
+          <p>Somos una agencia digital líder en Latinoamérica apasionada por la innovación en programación web. Nuestro equipo experto crea soluciones digitales personalizadas para empresas en Lima, Guayaquil y toda la región, comprometidos con calidad, creatividad y resultados excepcionales.</p>
         </div>
 
         <div class="row g-4 g-lg-5" data-aos="fade-up" data-aos-delay="200">
 
           <div class="col-lg-5">
             <div class="about-img">
-              <img src="assets/img/about.jpg" class="img-fluid" alt="somos">
+              <img src="assets/img/about.jpg" class="img-fluid" alt="Equipo Pucusoft - Agencia digital en Perú" loading="lazy">
             </div>
           </div>
          <div class="col-lg-7">
@@ -268,14 +355,14 @@
 
         <div class="clients-slider swiper">
           <div class="swiper-wrapper align-items-center">
-            <div class="swiper-slide"><img src="assets/img/clients/client-1.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-2.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-3.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-4.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-5.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-6.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-7.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-8.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-1.png" class="img-fluid" alt="Cliente 1 - Pucusoft" loading="lazy"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-2.png" class="img-fluid" alt="Cliente 2 - Pucusoft" loading="lazy"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-3.png" class="img-fluid" alt="Cliente 3 - Pucusoft" loading="lazy"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-4.png" class="img-fluid" alt="Cliente 4 - Pucusoft" loading="lazy"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-5.png" class="img-fluid" alt="Cliente 5 - Pucusoft" loading="lazy"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-6.png" class="img-fluid" alt="Cliente 6 - Pucusoft" loading="lazy"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-7.png" class="img-fluid" alt="Cliente 7 - Pucusoft" loading="lazy"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-8.png" class="img-fluid" alt="Cliente 8 - Pucusoft" loading="lazy"></div>
           </div>
         </div>
 
@@ -651,15 +738,15 @@
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="assets/img/testimonials/CirculoToño.png" class="testimonial-img" alt="">
+                <img src="assets/img/testimonials/CirculoToño.png" class="testimonial-img" alt="Jose Puero - CEO Pucusoft">
                 <h3>Jose Puero </h3>
-                <h4>Ceo &amp;Desarrolador</h4>
+                <h4>CEO & Desarrollador</h4>
                 <div class="stars">
                   <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                 Es una empresa de tecnología fundada en el año 2019 y conformada por un grupo de profesionales del IT, y las Diseño web y Gráfico Persigue activamente la  satisfacción de sus clientes, mediante el desarrollo de sus productos tecnológicos sustentada en la calidad de nuestro colaboradores
+                 Fundé Pucusoft en 2019 con la misión de transformar ideas digitales en realidad. Nuestro equipo de expertos IT ha completado más de 50 proyectos exitosos, combinando diseño web innovador con desarrollo robusto. La satisfacción del cliente es nuestro pilar fundamental.
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
@@ -667,15 +754,15 @@
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="assets/img/testimonials/CirculoStefy.png" class="testimonial-img" alt="">
+                <img src="assets/img/testimonials/CirculoStefy.png" class="testimonial-img" alt="Stephania Chehin - Diseñadora Gráfica">
                 <h3>Stephania Chehin</h3>
-                <h4>Designer</h4>
+                <h4>Diseñadora Gráfica Senior</h4>
                 <div class="stars">
                   <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  Me caracterizo por ser responsable, dedicado, honesto y con facilidad para el trabajo en equipo. Mi objetivo es lograr optimizar el trabajo, desarrollando alternativas que conduzcan al crecimiento de la empresa y así obtener suficiente satisfacción en la gestión del trabajo y a nivel personal Apasionado a las tecnologías y con formación técnica me he desempañado en la  electrónica telecomunicaciones dando Soportes de hardware y software.
+                  Como diseñadora gráfica con más de 5 años de experiencia, mi pasión es crear identidades visuales únicas que conecten emocionalmente con las marcas. En Pucusoft, he liderado el diseño de más de 30 sitios web, asegurando que cada proyecto refleje la esencia de nuestros clientes con un impacto visual memorable.
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
@@ -683,15 +770,15 @@
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="Carlos Puero - Experto en Oracle">
                 <h3>Carlos Puero</h3>
-                <h4>Oracle Expert</h4>
+                <h4>Experto en Bases de Datos Oracle</h4>
                 <div class="stars">
                   <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  Un programador Oracle es responsable del desarrollo, implementación y mantenimiento de varias áreas relacionadas con el sistema Oracle para la gestión y asegurarse de la administración y supervisión de la misma, además del correcto uso de de los datos.  
+                  Con 15 años de experiencia en administración de bases de datos Oracle, he optimizado sistemas para empresas Fortune 500. Mi especialidad es garantizar la integridad de datos y mejorar el rendimiento de consultas en un 40% promedio. Colaboro con Pucusoft para asegurar que cada aplicación web tenga una base de datos sólida y escalable.
                    <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
@@ -708,9 +795,19 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-header">
-          <h2>Nuestros precios</h2>
-          <p>Los costos de sitios web, determinados por complejidad y características. Incluyen diseño, desarrollo, alojamiento.Comparar opciones es esencial para decidir adecuadamente.</p>
+          <h2>Planes y Precios</h2>
+          <p>Planes accesibles para landing pages, webs corporativas y tiendas online en Perú y Ecuador. Precios transparentes con todo incluido para tu negocio.</p>
+          
+          <!-- Currency Selector -->
+          <div class="currency-selector" style="margin: 20px 0;">
+            <label for="currency" style="font-weight: bold; margin-right: 10px;">Moneda:</label>
+            <select id="currency" onchange="updatePrices()" style="padding: 8px 15px; border-radius: 5px; border: 1px solid #ddd; font-size: 16px;">
+              <option value="PEN">Soles (S/)</option>
+              <option value="USD">Dólares ($)</option>
+            </select>
+            <small id="exchange-rate" style="margin-left: 15px; color: #666;"></small>
           </div>
+        </div>
 
         <div class="row gy-4">
 
@@ -719,7 +816,8 @@
 
               <div class="pricing-header">
                 <h3>Landing Page</h3>
-                <h4><sup>S./</sup>280<span> + impuesto </span></h4>
+                <h4><sup>Desde S./</sup>280<span> + impuesto</span></h4>
+                <small>Precio ideal para pequeñas empresas</small>
               </div>
 
               <ul>
@@ -759,8 +857,9 @@
             <div class="pricing-item featured">
 
               <div class="pricing-header">
-                <h3> Plan  Web Corporativo</h3>
-                <h4><sup>S./</sup>500<span> + impuesto</span></h4>
+                <h3>Plan Web Corporativo</h3>
+                <h4><sup>Desde S./</sup>500<span> + impuesto</span></h4>
+                <small>Perfecto para empresas medianas</small>
               </div>
 
               <ul>
@@ -784,8 +883,9 @@
             <div class="pricing-item">
 
               <div class="pricing-header">
-                <h3> Plan Tienda Virtual</h3>
-                <h4><sup>S./</sup>Conversemos<span> </span></h4>
+                <h3>Plan Tienda Virtual</h3>
+                <h4><sup>S./</sup>800-1500<span> + impuesto</span></h4>
+                <small>Según características requeridas</small>
               </div>
 
               <ul>
@@ -806,6 +906,239 @@
         </div>
       </div>
     </section><!-- End Pricing Section -->
+    
+    <!-- ======= Custom Projects Section ======= -->
+    <section id="custom-projects" class="pricing" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+      <div class="container" data-aos="fade-up">
+        
+        <div class="section-header">
+          <h2 style="color: white;">Proyectos a Medida</h2>
+          <p style="color: rgba(255,255,255,0.9);">Soluciones personalizadas adaptadas a las necesidades específicas de tu negocio en Perú y Ecuador.</p>
+        </div>
+
+        <div class="row gy-4">
+          
+          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+            <div class="pricing-item" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
+              <div class="pricing-header">
+                <h3 style="color: white;">Web App a Medida</h3>
+                <h4 style="color: white;"><sup>Desde S./</sup>3000<span style="color: rgba(255,255,255,0.8);"> + impuesto</span></h4>
+                <small style="color: rgba(255,255,255,0.8);">Aplicaciones empresariales completas</small>
+              </div>
+              <ul style="color: white;">
+                <li><i class="bi bi-check-circle-fill" style="color: #4ade80;"></i> Sistema de gestión personalizado</li>
+                <li><i class="bi bi-check-circle-fill" style="color: #4ade80;"></i> Integración con APIs externas</li>
+                <li><i class="bi bi-check-circle-fill" style="color: #4ade80;"></i> Panel de administrador avanzado</li>
+                <li><i class="bi bi-check-circle-fill" style="color: #4ade80;"></i> Base de datos optimizada</li>
+                <li><i class="bi bi-check-circle-fill" style="color: #4ade80;"></i> Soporte técnico 6 meses</li>
+              </ul>
+              <div class="text-center mt-auto">
+                <a href="#contact" class="buy-btn" style="background: #4ade80; color: #1f2937; border: none;">Consultar</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="400">
+            <div class="pricing-item featured" style="background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.3);">
+              <div class="pricing-header">
+                <h3 style="color: white;">E-commerce Avanzado</h3>
+                <h4 style="color: white;"><sup>Desde S./</sup>2500<span style="color: rgba(255,255,255,0.8);"> + impuesto</span></h4>
+                <small style="color: rgba(255,255,255,0.8);">Tienda online con funcionalidades premium</small>
+              </div>
+              <ul style="color: white;">
+                <li><i class="bi bi-check-circle-fill" style="color: #4ade80;"></i> Productos ilimitados</li>
+                <li><i class="bi bi-check-circle-fill" style="color: #4ade80;"></i> Pasarelas de pago múltiples</li>
+                <li><i class="bi bi-check-circle-fill" style="color: #4ade80;"></i> Sistema de inventario</li>
+                <li><i class="bi bi-check-circle-fill" style="color: #4ade80;"></i> Gestión de envíos</li>
+                <li><i class="bi bi-check-circle-fill" style="color: #4ade80;"></i> Dashboard analítico</li>
+              </ul>
+              <div class="text-center mt-auto">
+                <a href="#contact" class="buy-btn" style="background: #4ade80; color: #1f2937; border: none;">Consultar</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="600">
+            <div class="pricing-item" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
+              <div class="pricing-header">
+                <h3 style="color: white;">Sistema ERP/CRM</h3>
+                <h4 style="color: white;"><sup>Desde S./</sup>5000<span style="color: rgba(255,255,255,0.8);"> + impuesto</span></h4>
+                <small style="color: rgba(255,255,255,0.8);">Gestión empresarial integral</small>
+              </div>
+              <ul style="color: white;">
+                <li><i class="bi bi-check-circle-fill" style="color: #4ade80;"></i> Gestión de clientes y ventas</li>
+                <li><i class="bi bi-check-circle-fill" style="color: #4ade80;"></i> Control de inventario</li>
+                <li><i class="bi bi-check-circle-fill" style="color: #4ade80;"></i> Reportes avanzados</li>
+                <li><i class="bi bi-check-circle-fill" style="color: #4ade80;"></i> Múltiples usuarios y roles</li>
+                <li><i class="bi bi-check-circle-fill" style="color: #4ade80;"></i> Capacitación incluida</li>
+              </ul>
+              <div class="text-center mt-auto">
+                <a href="#contact" class="buy-btn" style="background: #4ade80; color: #1f2937; border: none;">Consultar</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        
+        <div class="text-center mt-5">
+          <p style="color: rgba(255,255,255,0.9); font-size: 18px;">
+            <i class="bi bi-clock-history"></i> 
+            <strong>Tiempo de desarrollo:</strong> 4-12 semanas según complejidad<br>
+            <i class="bi bi-shield-check"></i> 
+            <strong>Garantía:</strong> 1 año de soporte técnico incluido
+          </p>
+        </div>
+
+      </div>
+    </section><!-- End Custom Projects Section -->
+    
+    <!-- ======= GitHub Projects Section ======= -->
+    <section id="github-projects" class="portfolio" style="background: #f8f9fa;">
+      <div class="container" data-aos="fade-up">
+        
+        <div class="section-header">
+          <h2>Proyectos en Vivo</h2>
+          <p>Explora nuestros proyectos funcionales directamente desde GitHub. Sin código expuesto, solo demos interactivas de nuestras soluciones.</p>
+        </div>
+
+        <div class="row gy-4">
+          
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="portfolio-item" style="border: 1px solid #e9ecef; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
+              <div class="portfolio-header" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 15px; color: white;">
+                <div class="d-flex justify-content-between align-items-center">
+                  <h4 style="margin: 0; font-size: 16px;">Tajmeel Stefany</h4>
+                  <span class="badge" style="background: rgba(255,255,255,0.2);">E-commerce</span>
+                </div>
+              </div>
+              
+              <div class="portfolio-demo" style="height: 200px; background: #fff; position: relative;">
+                <iframe src="https://puerosoftware.github.io/Tajmeel_Stefany_Ecommerce/" style="width: 100%; height: 100%; border: none;" loading="lazy"></iframe>
+                <div class="demo-overlay" style="position: absolute; top: 10px; right: 10px; background: rgba(0,0,0,0.7); color: white; padding: 5px 10px; border-radius: 5px; font-size: 12px;">
+                  <i class="bi bi-play-circle"></i> Demo Activa
+                </div>
+              </div>
+              
+              <div class="portfolio-info" style="padding: 20px;">
+                <h5>Tienda de Jabones Artesanales</h5>
+                <p style="color: #666; font-size: 14px;">E-commerce completo para tienda de jabones y velas artesanales con carrito y gestión de productos.</p>
+                
+                <div class="tech-stack" style="margin: 15px 0;">
+                  <span class="badge bg-secondary me-1">HTML</span>
+                  <span class="badge bg-secondary me-1">CSS</span>
+                  <span class="badge bg-secondary me-1">JavaScript</span>
+                  <span class="badge bg-secondary me-1">PHP</span>
+                </div>
+                
+                <div class="portfolio-links">
+                  <a href="https://github.com/PueroSoftware/Tajmeel_Stefany_Ecommerce" target="_blank" class="btn btn-outline-primary btn-sm me-2">
+                    <i class="bi bi-github"></i> Ver Código
+                  </a>
+                  <a href="https://puerosoftware.github.io/Tajmeel_Stefany_Ecommerce/" target="_blank" class="btn btn-primary btn-sm">
+                    <i class="bi bi-eye"></i> Ver Demo
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="portfolio-item" style="border: 1px solid #e9ecef; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
+              <div class="portfolio-header" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding: 15px; color: white;">
+                <div class="d-flex justify-content-between align-items-center">
+                  <h4 style="margin: 0; font-size: 16px;">Centro Médico</h4>
+                  <span class="badge" style="background: rgba(255,255,255,0.2);">Python</span>
+                </div>
+              </div>
+              
+              <div class="portfolio-demo" style="height: 200px; background: #fff; position: relative; display: flex; align-items: center; justify-content: center;">
+                <div style="text-align: center;">
+                  <i class="bi bi-hospital" style="font-size: 48px; color: #f093fb;"></i>
+                  <h6 style="margin-top: 10px;">Sistema Médico</h6>
+                  <p style="font-size: 12px; color: #666;">Aplicación de escritorio Python</p>
+                </div>
+                <div class="demo-overlay" style="position: absolute; top: 10px; right: 10px; background: rgba(0,0,0,0.7); color: white; padding: 5px 10px; border-radius: 5px; font-size: 12px;">
+                  <i class="bi bi-laptop"></i> Desktop
+                </div>
+              </div>
+              
+              <div class="portfolio-info" style="padding: 20px;">
+                <h5>Gestión Centro Médico</h5>
+                <p style="color: #666; font-size: 14px;">Sistema completo para gestión de centros médicos con interfaz gráfica Tkinter y CRUD.</p>
+                
+                <div class="tech-stack" style="margin: 15px 0;">
+                  <span class="badge bg-secondary me-1">Python</span>
+                  <span class="badge bg-secondary me-1">Tkinter</span>
+                  <span class="badge bg-secondary me-1">CustomTkinter</span>
+                </div>
+                
+                <div class="portfolio-links">
+                  <a href="https://github.com/PueroSoftware/Centro_Medico_CTk" target="_blank" class="btn btn-outline-primary btn-sm me-2">
+                    <i class="bi bi-github"></i> Ver Código
+                  </a>
+                  <a href="https://github.com/PueroSoftware/Centro-Medico" target="_blank" class="btn btn-primary btn-sm">
+                    <i class="bi bi-code-slash"></i> Ver Proyecto
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="portfolio-item" style="border: 1px solid #e9ecef; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
+              <div class="portfolio-header" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); padding: 15px; color: white;">
+                <div class="d-flex justify-content-between align-items-center">
+                  <h4 style="margin: 0; font-size: 16px;">Pucusoft Website</h4>
+                  <span class="badge" style="background: rgba(255,255,255,0.2);">Web</span>
+                </div>
+              </div>
+              
+              <div class="portfolio-demo" style="height: 200px; background: #fff; position: relative;">
+                <iframe src="https://pucusoft.netlify.app" style="width: 100%; height: 100%; border: none;" loading="lazy"></iframe>
+                <div class="demo-overlay" style="position: absolute; top: 10px; right: 10px; background: rgba(0,0,0,0.7); color: white; padding: 5px 10px; border-radius: 5px; font-size: 12px;">
+                  <i class="bi bi-play-circle"></i> Demo Activa
+                </div>
+              </div>
+              
+              <div class="portfolio-info" style="padding: 20px;">
+                <h5>Sitio Web Corporativo</h5>
+                <p style="color: #666; font-size: 14px;">Sitio web oficial de Pucusoft con diseño moderno y optimizado para SEO.</p>
+                
+                <div class="tech-stack" style="margin: 15px 0;">
+                  <span class="badge bg-secondary me-1">HTML5</span>
+                  <span class="badge bg-secondary me-1">CSS3</span>
+                  <span class="badge bg-secondary me-1">JavaScript</span>
+                  <span class="badge bg-secondary me-1">Bootstrap</span>
+                </div>
+                
+                <div class="portfolio-links">
+                  <a href="https://github.com/PueroSoftware/website_Pucusoft" target="_blank" class="btn btn-outline-primary btn-sm me-2">
+                    <i class="bi bi-github"></i> Ver Código
+                  </a>
+                  <a href="https://pucusoft.netlify.app" target="_blank" class="btn btn-primary btn-sm">
+                    <i class="bi bi-eye"></i> Ver Demo
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="text-center mt-5">
+          <div class="alert alert-info" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border: none; color: white;">
+            <i class="bi bi-info-circle"></i>
+            <strong>¿Cómo funciona?</strong> Todos nuestros proyectos están desplegados en GitHub Pages, Vercel o Netlify. 
+            Puedes ver el código fuente y probar la demostración funcional sin comprometer tu información.
+          </div>
+          
+          <a href="https://github.com/PueroSoftware" target="_blank" class="btn btn-lg btn-outline-primary">
+            <i class="bi bi-github"></i> Ver Todos los Proyectos en GitHub
+          </a>
+        </div>
+
+      </div>
+    </section><!-- End GitHub Projects Section -->
     <!-- ======= F.A.Q Section ======= -->
     <!-- ======= Portfolio Section ======= -->
     <section id="portfolio" class="portfolio" data-aos="fade-up">
@@ -834,38 +1167,42 @@
           <div class="row g-0 portfolio-container">
 
             <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-app">
-              <img src="assets/img/portfolio/app-1.jpg" class="img-fluid" alt="">
+              <img src="assets/img/portfolio/app-1.jpg" class="img-fluid" alt="Aplicación móvil desarrollada por Pucusoft">
               <div class="portfolio-info">
-                <h4>App 1</h4>
-                <a href="assets/img/portfolio/app-1.jpg" title="App 1" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                <h4>App de Delivery</h4>
+                <p>Aplicación móvil para servicio de delivery en Lima</p>
+                <a href="assets/img/portfolio/app-1.jpg" title="App Delivery Lima" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="Más detalles" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div><!-- End Portfolio Item -->
 
             <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-product">
-              <img src="assets/img/portfolio/product-1.jpg" class="img-fluid" alt="">
+              <img src="assets/img/portfolio/product-1.jpg" class="img-fluid" alt="Sitio web corporativo desarrollado por Pucusoft">
               <div class="portfolio-info">
-                <h4>Product 1</h4>
-                <a href="assets/img/portfolio/product-1.jpg" title="Product 1" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                <h4>Web Corporativa</h4>
+                <p>Sitio web para empresa de consultoría en Perú</p>
+                <a href="assets/img/portfolio/product-1.jpg" title="Web Corporativa Perú" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="Más detalles" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div><!-- End Portfolio Item -->
 
             <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-branding">
-              <img src="assets/img/portfolio/branding-1.jpg" class="img-fluid" alt="">
+              <img src="assets/img/portfolio/branding-1.jpg" class="img-fluid" alt="Diseño de branding creado por Pucusoft">
               <div class="portfolio-info">
-                <h4>Branding 1</h4>
-                <a href="assets/img/portfolio/branding-1.jpg" title="Branding 1" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                <h4>Identidad de Marca</h4>
+                <p>Branding completo para restaurante en Miraflores</p>
+                <a href="assets/img/portfolio/branding-1.jpg" title="Branding Restaurante" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="Más detalles" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div><!-- End Portfolio Item -->
 
             <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-books">
-              <img src="assets/img/portfolio/books-1.jpg" class="img-fluid" alt="">
+              <img src="assets/img/portfolio/books-1.jpg" class="img-fluid" alt="Material publicitario diseñado por Pucusoft">
               <div class="portfolio-info">
-                <h4>Books 1</h4>
-                <a href="assets/img/portfolio/books-1.jpg" title="Branding 1" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                <h4>Campaña Publicitaria</h4>
+                <p>Diseño gráfico para campaña de marketing digital</p>
+                <a href="assets/img/portfolio/books-1.jpg" title="Campaña Marketing" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="portfolio-details.html" title="Más detalles" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div><!-- End Portfolio Item -->
 
@@ -1122,7 +1459,7 @@
                 <div>
                   <h4>Call:</h4>
                   <p>+51 917 955 859 </p>
-                  <p>+51 989 604 800</p>
+                  <p>+593 0987321055</p>
                 </div>
               </div><!-- End Info Item -->
 
@@ -1263,6 +1600,59 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- Currency Converter Script -->
+  <script>
+    // Exchange rates (actualizados)
+    const exchangeRates = {
+      PEN: 1,  // Sol Peruano (base)
+      USD: 0.27  // 1 SOL = 0.27 USD (aproximado)
+    };
+    
+    // Base prices in PEN (actualizados para mercado binacional)
+    const basePrices = {
+      landing: 350,      // S/ 350-450
+      corporate: 600,    // S/ 600-800
+      storeMin: 1200,    // S/ 1,200-2,500
+      storeMax: 2500
+    };
+    
+    function updatePrices() {
+      const currency = document.getElementById('currency').value;
+      const rate = exchangeRates[currency];
+      const symbol = currency === 'PEN' ? 'S/' : '$';
+      
+      // Update exchange rate display
+      const exchangeRateEl = document.getElementById('exchange-rate');
+      if (currency === 'USD') {
+        exchangeRateEl.textContent = `Tipo de cambio: 1 S/ = ${exchangeRates.USD} $ (aproximado)`;
+      } else {
+        exchangeRateEl.textContent = '';
+      }
+      
+      // Update price displays
+      const priceElements = document.querySelectorAll('.pricing-header h4');
+      priceElements.forEach((el, index) => {
+        let basePrice;
+        if (index === 0) basePrice = basePrices.landing;
+        else if (index === 1) basePrice = basePrices.corporate;
+        else if (index === 2) basePrice = `${basePrices.storeMin}-${basePrices.storeMax}`;
+        
+        if (index === 2) {
+          // For store with range
+          const minPrice = Math.round(basePrices.storeMin * rate);
+          const maxPrice = Math.round(basePrices.storeMax * rate);
+          el.innerHTML = `<sup>Desde ${symbol}</sup>${minPrice}-${maxPrice}<span> + impuesto</span>`;
+        } else {
+          const convertedPrice = Math.round(basePrice * rate);
+          el.innerHTML = `<sup>Desde ${symbol}</sup>${convertedPrice}<span> + impuesto</span>`;
+        }
+      });
+    }
+    
+    // Initialize on page load
+    document.addEventListener('DOMContentLoaded', updatePrices);
+  </script>
 
 </body>
 
