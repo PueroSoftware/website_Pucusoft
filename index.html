@@ -140,12 +140,7 @@
       <nav id="navbar" class="navbar">
         <ul>
 
-          <li class="dropdown"><a href="#"><span>Home</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-            <ul>
-              <li><a href="index.html" class="active">Home</a></li>
-            </ul>
-          </li>
-                <!-- Menu Clase nav-link scrollto -->
+          <li><a class="nav-link scrollto" href="index.html">Home</a></li>
           <li><a class="nav-link scrollto" href="index.html#about">Somos</a></li>
           <li><a class="nav-link scrollto" href="index.html#services">Servicios</a></li>
           <li><a class="nav-link scrollto" href="index.html#portfolio">Portafolio</a></li>
@@ -198,7 +193,7 @@
         <i class="bi bi-list mobile-nav-toggle d-none"></i>
       </nav><!-- .navbar -->
 
-      <a class="btn-getstarted scrollto" href="index.html#about">Empezar</a>
+      <!-- <a class="btn-getstarted scrollto" href="index.html#about">Empezar</a> -->
 
     </div>
   </header><!-- End Header -->
@@ -1652,6 +1647,120 @@
     
     // Initialize on page load
     document.addEventListener('DOMContentLoaded', updatePrices);
+  </script>
+
+  <!-- Visit Counter with Telegram Notification -->
+  <script>
+    // Visit Counter with Telegram Notification
+    (function() {
+      // Get or create visit count
+      let visitCount = localStorage.getItem('pucusoft_visits') || 0;
+      visitCount = parseInt(visitCount) + 1;
+      localStorage.setItem('pucusoft_visits', visitCount);
+      
+      // Check if this is a new session (not just a page refresh)
+      const lastVisit = sessionStorage.getItem('pucusoft_last_visit');
+      const now = new Date().getTime();
+      const isNewSession = !lastVisit || (now - parseInt(lastVisit)) > 30 * 60 * 1000; // 30 minutes
+      
+      if (isNewSession) {
+        sessionStorage.setItem('pucusoft_last_visit', now);
+        
+        // Send notification to Telegram
+        sendTelegramNotification(visitCount);
+      }
+      
+      // Display visit counter
+      function displayCounter() {
+        const counterDiv = document.createElement('div');
+        counterDiv.id = 'visit-counter';
+        counterDiv.style.cssText = `
+          position: fixed;
+          bottom: 20px;
+          left: 20px;
+          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          color: white;
+          padding: 10px 15px;
+          border-radius: 25px;
+          font-size: 12px;
+          font-weight: bold;
+          z-index: 1000;
+          box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          font-family: 'Poppins', sans-serif;
+        `;
+        counterDiv.innerHTML = `
+          <i class="bi bi-eye-fill"></i>
+          <span>Visitas: ${visitCount}</span>
+        `;
+        
+        document.body.appendChild(counterDiv);
+      }
+      
+      // Send notification to Telegram
+      function sendTelegramNotification(totalVisits) {
+        const botToken = '7964493270:AAHNi_fMDPR96E5BdDfaX8I-c_L-9gC-UV0'; // Token real del bot
+        const chatId = '5930987321055'; // Tu número de Telegram
+        
+        const message = `🔔 Nueva visita en Pucusoft
+📊 Total de visitas: ${totalVisits}
+🌐 Página: ${window.location.href}
+🕐 Fecha: ${new Date().toLocaleString('es-EC')}
+📍 País: ${getCountryCode()}`;
+        
+        // Usamos un servicio de proxy para evitar CORS
+        const telegramUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
+        
+        fetch(telegramUrl, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            chat_id: chatId,
+            text: message,
+            parse_mode: 'HTML'
+          })
+        })
+        .then(response => response.json())
+        .then(data => {
+          console.log('Notificación enviada a Telegram:', data);
+        })
+        .catch(error => {
+          console.log('Error al enviar notificación:', error);
+          // Intentar con método alternativo si falla
+          sendAlternativeNotification(totalVisits);
+        });
+      }
+      
+      // Alternative notification method
+      function sendAlternativeNotification(totalVisits) {
+        // Crear una imagen invisible que carga un webhook
+        const img = new Image();
+        img.src = `https://api.telegram.org/bot7964493270:AAHNi_fMDPR96E5BdDfaX8I-c_L-9gC-UV0/sendMessage?chat_id=5930987321055&text=${encodeURIComponent(
+          `🔔 Visita #${totalVisits} - Pucusoft\n${window.location.href}\n${new Date().toLocaleString('es-EC')}`
+        )}`;
+        img.style.display = 'none';
+        document.body.appendChild(img);
+      }
+      
+      // Get country code (simplified)
+      function getCountryCode() {
+        const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        if (timezone.includes('Lima') || timezone.includes('Peru')) return '🇵🇪 Perú';
+        if (timezone.includes('Guayaquil') || timezone.includes('Ecuador')) return '🇪🇨 Ecuador';
+        return '🌍 Desconocido';
+      }
+      
+      // Initialize counter when DOM is loaded
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', displayCounter);
+      } else {
+        displayCounter();
+      }
+    })();
   </script>
 
 </body>
