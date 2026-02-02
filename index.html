@@ -1635,9 +1635,7 @@
             &copy; Copyright <strong><span>pucusoftpuero</span></strong>. All Rights Reserved
           </div>
           <div class="credits">
-            
-            <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/herobiz-bootstrap-business-template/ -->
-            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            &copy; 2026 Pucusoft - Todos los derechos reservados
           </div>
         </div>
 
@@ -1716,14 +1714,6 @@
           el.innerHTML = `<sup>Desde ${symbol}</sup>${convertedPrice}<span> + impuesto</span>`;
         }
       });
-      
-      // Update custom project prices
-      const customPriceElements = document.querySelectorAll('.custom-price');
-      customPriceElements.forEach(el => {
-        const basePrice = parseInt(el.getAttribute('data-base-price'));
-        const convertedPrice = Math.round(basePrice * rate);
-        el.innerHTML = `<sup>Desde ${symbol}</sup>${convertedPrice}<span style="color: rgba(255,255,255,0.8);"> + impuesto</span>`;
-      });
     }
     
     // Initialize on page load
@@ -1783,7 +1773,7 @@
       // Send notification to Telegram
       function sendTelegramNotification(totalVisits) {
         const botToken = '7964493270:AAHNi_fMDPR96E5BdDfaX8I-c_L-9gC-UV0'; // Token real del bot
-        const chatId = '@5930987321055'; // Tu número de Telegram (debe incluir @ si es username)
+        const chatId = '5930987321055'; // Tu número de Telegram (sin @)
         
         const message = `🔔 Nueva visita en Pucusoft
 📊 Total de visitas: ${totalVisits}
@@ -1795,10 +1785,11 @@
         const telegramUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
         
         // Debug: mostrar información en consola
-        console.log('Intentando enviar notificación a Telegram...');
-        console.log('Bot Token:', botToken.substring(0, 10) + '...');
-        console.log('Chat ID:', chatId);
-        console.log('URL:', telegramUrl);
+        console.log('🚀 Intentando enviar notificación a Telegram...');
+        console.log('🤖 Bot Token:', botToken.substring(0, 10) + '...');
+        console.log('💬 Chat ID:', chatId);
+        console.log('🌐 URL:', telegramUrl);
+        console.log('📝 Mensaje:', message);
         
         fetch(telegramUrl, {
           method: 'POST',
@@ -1812,19 +1803,23 @@
           })
         })
         .then(response => {
-          console.log('Response status:', response.status);
+          console.log('📡 Response status:', response.status);
+          console.log('📋 Response headers:', response.headers);
           return response.json();
         })
         .then(data => {
-          console.log('Notificación enviada a Telegram:', data);
-          if (!data.ok) {
-            console.error('Error en la respuesta de Telegram:', data);
+          console.log('✅ Respuesta de Telegram:', data);
+          if (data.ok) {
+            console.log('🎉 Notificación enviada exitosamente');
+          } else {
+            console.error('❌ Error en la respuesta de Telegram:', data);
+            console.log('🔄 Intentando método alternativo...');
             sendAlternativeNotification(totalVisits);
           }
         })
         .catch(error => {
-          console.log('Error al enviar notificación:', error);
-          // Intentar con método alternativo si falla
+          console.error('❌ Error al enviar notificación:', error);
+          console.log('🔄 Intentando método alternativo...');
           sendAlternativeNotification(totalVisits);
         });
       }
