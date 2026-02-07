@@ -1,511 +1,516 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Blog de Desarrollo Web y Tecnología | Pucusoft</title>
-  <meta content="Artículos sobre desarrollo web, diseño gráfico, tiendas online y tecnología en Perú. Consejos expertos para tu negocio digital." name="description">
-  <meta content="blog desarrollo web Perú, tecnología Perú, diseño gráfico Perú, tiendas online Perú, marketing digital Perú" name="keywords">
-
-  <!-- Favicons -->
+  <!-- Meta Tags Optimizados para SEO -->
+  <title>Blog Pucusoft | Desarrollo Web, Marketing Digital y Tecnología</title>
+  <meta content="Blog de Pucusoft con artículos sobre desarrollo web, SEO, marketing digital, seguridad y tecnología para empresas en Perú y Ecuador." name="description">
+  <meta content="blog desarrollo web, SEO Perú Ecuador, marketing digital, tecnología, Pucusoft, artículos web" name="keywords">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Blog Pucusoft | Desarrollo Web, Marketing Digital y Tecnología">
+  <meta property="og:description" content="Artículos expertos sobre desarrollo web, SEO, marketing digital y tecnología para empresas en Perú y Ecuador.">
+  <meta property="og:image" content="https://pucusoft.com/assets/img/logo.png">
+  <meta property="og:url" content="https://pucusoft.com/blog.html">
+  <meta property="og:type" content="website">
+  
+  <!-- Favicon -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <!-- Variables CSS Files. Uncomment your preferred color scheme -->
+  <!-- Variables CSS Files -->
   <link href="assets/css/variables.css" rel="stylesheet">
-  <!-- <link href="assets/css/variables-blue.css" rel="stylesheet"> -->
-  <!-- <link href="assets/css/variables-green.css" rel="stylesheet"> -->
-  <!-- <link href="assets/css/variables-orange.css" rel="stylesheet"> -->
-  <!-- <link href="assets/css/variables-purple.css" rel="stylesheet"> -->
-  <!-- <link href="assets/css/variables-red.css" rel="stylesheet"> -->
-  <!-- <link href="assets/css/variables-pink.css" rel="stylesheet"> -->
 
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: HeroBiz
-  * Updated: Sep 18 2023 with Bootstrap v5.3.2
-  * Template URL: https://bootstrapmade.com/herobiz-bootstrap-business-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <!-- Estilos adicionales para Blog -->
+  <style>
+    .hero-blog {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 120px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero-blog::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    
+    .blog-card {
+      background: #fff;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .blog-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+    
+    .blog-image {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    
+    .blog-card:hover .blog-image {
+      transform: scale(1.05);
+    }
+    
+    .blog-content {
+      padding: 30px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .blog-meta {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 15px;
+      font-size: 14px;
+      color: #666;
+    }
+    
+    .blog-meta span {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    
+    .blog-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+      color: #333;
+      line-height: 1.3;
+    }
+    
+    .blog-excerpt {
+      color: #666;
+      margin-bottom: 20px;
+      flex-grow: 1;
+      line-height: 1.6;
+    }
+    
+    .blog-tags {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+    
+    .tag {
+      background: #f0f0f0;
+      color: #666;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      transition: all 0.3s ease;
+    }
+    
+    .tag:hover {
+      background: #667eea;
+      color: white;
+    }
+    
+    .read-more {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 12px 25px;
+      border-radius: 25px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.3s ease;
+      border: none;
+      font-weight: 500;
+    }
+    
+    .read-more:hover {
+      transform: translateX(5px);
+      box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+    }
+    
+    .category-badge {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: #28a745;
+      color: white;
+      padding: 8px 15px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      z-index: 2;
+    }
+    
+    .blog-sidebar {
+      background: #f8f9fa;
+      border-radius: 15px;
+      padding: 30px;
+      margin-bottom: 30px;
+    }
+    
+    .sidebar-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    
+    .sidebar-list {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .sidebar-list li {
+      padding: 10px 0;
+      border-bottom: 1px solid #e9ecef;
+      transition: all 0.3s ease;
+    }
+    
+    .sidebar-list li:hover {
+      padding-left: 10px;
+      color: #667eea;
+    }
+    
+    .sidebar-list li:last-child {
+      border-bottom: none;
+    }
+    
+    .newsletter-box {
+      background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+      color: white;
+      border-radius: 15px;
+      padding: 30px;
+      text-align: center;
+    }
+    
+    @media (max-width: 768px) {
+      .hero-blog {
+        padding: 80px 0;
+      }
+      
+      .blog-card {
+        margin-bottom: 30px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="header fixed-top" data-scrollto-offset="0">
+  <header id="header" class="header fixed-top">
     <div class="container-fluid d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1>HeroBiz<span>.</span></h1>
+        <div class="logo-text">Pucusoft<span>.</span></div>
       </a>
 
       <nav id="navbar" class="navbar">
         <ul>
-
-          <li class="dropdown"><a href="#"><span>Home</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-            <ul>
-              <li><a href="index.html">Home 1 - index.html</a></li>
-              <li><a href="index-2.html">Home 2 - index-2.html</a></li>
-              <li><a href="index-3.html">Home 3 - index-3.html</a></li>
-              <li><a href="index-4.html">Home 4 - index-4.html</a></li>
-            </ul>
-          </li>
-
-          <li><a class="nav-link scrollto" href="index.html#about">About</a></li>
-          <li><a class="nav-link scrollto" href="index.html#services">Services</a></li>
-          <li><a class="nav-link scrollto" href="index.html#portfolio">Portfolio</a></li>
-          <li><a class="nav-link scrollto" href="index.html#team">Team</a></li>
-          <li><a href="blog.html" class="active">Blog</a></li>
-          <li class="dropdown megamenu"><a href="#"><span>Mega Menu</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-            <ul>
-              <li>
-                <a href="#">Column 1 link 1</a>
-                <a href="#">Column 1 link 2</a>
-                <a href="#">Column 1 link 3</a>
-              </li>
-              <li>
-                <a href="#">Column 2 link 1</a>
-                <a href="#">Column 2 link 2</a>
-                <a href="#">Column 3 link 3</a>
-              </li>
-              <li>
-                <a href="#">Column 3 link 1</a>
-                <a href="#">Column 3 link 2</a>
-                <a href="#">Column 3 link 3</a>
-              </li>
-              <li>
-                <a href="#">Column 4 link 1</a>
-                <a href="#">Column 4 link 2</a>
-                <a href="#">Column 4 link 3</a>
-              </li>
-            </ul>
-          </li>
-          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-            </ul>
-          </li>
-          <li><a class="nav-link scrollto" href="index.html#contact">Contact</a></li>
+          <li><a class="nav-link scrollto" href="index.html">Home</a></li>
+          <li><a class="nav-link scrollto" href="index.html#about">Somos</a></li>
+          <li><a class="nav-link scrollto" href="index.html#services">Servicios</a></li>
+          <li><a class="nav-link scrollto" href="index.html#portfolio">Portafolio</a></li>
+          <li><a class="nav-link active" href="blog.html">Blog</a></li>
+          <li><a class="nav-link scrollto" href="index.html#contact">Contactos</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle d-none"></i>
-      </nav><!-- .navbar -->
-
-      <a class="btn-getstarted scrollto" href="index.html#about">Get Started</a>
+      </nav>
 
     </div>
   </header><!-- End Header -->
 
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="hero-blog d-flex align-items-center">
+    <div class="container" data-aos="zoom-out">
+      <div class="hero-content text-center">
+        <h1 class="mb-4">Blog Pucusoft</h1>
+        <h2 class="mb-4">Desarrollo Web, Marketing Digital y Tecnología</h2>
+        <p class="mb-4">Artículos expertos, tutoriales y guías para impulsar tu negocio digital en Perú y Ecuador. Compartimos conocimiento práctico basado en años de experiencia.</p>
+        <div class="d-flex justify-content-center gap-3">
+          <a href="#articulos" class="btn-get-started scrollto">Explorar Artículos</a>
+          <a href="#newsletter" class="btn-get-started" style="background: transparent; border: 2px solid white;">Suscribirse</a>
+        </div>
+      </div>
+    </div>
+  </section><!-- End Hero Section -->
+
   <main id="main">
 
-    <!-- ======= Breadcrumbs ======= -->
-    <div class="breadcrumbs">
-      <div class="container">
-
-        <div class="d-flex justify-content-between align-items-center">
-          <h2>Blog</h2>
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li>Blog</li>
-          </ol>
-        </div>
-
-      </div>
-    </div><!-- End Breadcrumbs -->
-
-    <!-- ======= Blog Section ======= -->
-    <section id="blog" class="blog">
+    <!-- ======= Blog Posts Section ======= -->
+    <section id="articulos" class="blog">
       <div class="container" data-aos="fade-up">
 
-        <div class="row g-5">
-
+        <div class="row">
+          <!-- Main Content -->
           <div class="col-lg-8">
 
-            <div class="row gy-4 posts-list">
+            <div class="section-header">
+              <h2>Últimos Artículos</h2>
+              <p>Contenido actualizado con las mejores prácticas y tendencias del mundo digital.</p>
+            </div>
 
-              <div class="col-lg-6">
-                <article class="d-flex flex-column">
+            <div class="row gy-4">
 
-                  <div class="post-img">
-                    <img src="assets/img/blog/blog-1.jpg" alt="" class="img-fluid">
+              <!-- Artículo 1: Desarrollo Web a Medida -->
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="blog-card">
+                  <div class="position-relative">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" 
+                         class="blog-image" 
+                         alt="Desarrollo Web a Medida - Pucusoft"
+                         loading="lazy">
+                    <div class="category-badge">Desarrollo Web</div>
                   </div>
-
-                  <h2 class="title">
-                    <a href="blog-details.html">Dolorum optio tempore voluptas dignissimos cumque fuga qui quibusdam quia</a>
-                  </h2>
-
-                  <div class="meta-top">
-                    <ul>
-                      <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-details.html">John Doe</a></li>
-                      <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-details.html"><time datetime="2022-01-01">Jan 1, 2022</time></a></li>
-                      <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-details.html">12 Comments</a></li>
-                    </ul>
+                  <div class="blog-content">
+                    <div class="blog-meta">
+                      <span><i class="bi bi-calendar3"></i> 5 Enero, 2026</span>
+                      <span><i class="bi bi-person"></i> Stephania Chehin</span>
+                      <span><i class="bi bi-clock"></i> 8 min</span>
+                    </div>
+                    <h3 class="blog-title">Desarrollo Web a Medida: ¿Vale la Pena?</h3>
+                    <p class="blog-excerpt">Análisis completo sobre los beneficios del desarrollo personalizado vs plantillas para empresas en Lima y Guayaquil. ROI, casos de éxito y mejores prácticas.</p>
+                    <div class="blog-tags">
+                      <span class="tag">Desarrollo Web</span>
+                      <span class="tag">ROI</span>
+                      <span class="tag">Empresas</span>
+                    </div>
+                    <a href="blog-desarrollo-medida.html" class="read-more">
+                      Leer más <i class="bi bi-arrow-right"></i>
+                    </a>
                   </div>
+                </div>
+              </div>
 
-                  <div class="content">
-                    <p>
-                      Similique neque nam consequuntur ad non maxime aliquam quas. Quibusdam animi praesentium. Aliquam et laboriosam eius aut nostrum quidem aliquid dicta.
-                    </p>
+              <!-- Artículo 2: SEO Local -->
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="blog-card">
+                  <div class="position-relative">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" 
+                         class="blog-image" 
+                         alt="SEO Local Perú Ecuador - Pucusoft"
+                         loading="lazy">
+                    <div class="category-badge">SEO</div>
                   </div>
-
-                  <div class="read-more mt-auto align-self-end">
-                    <a href="blog-details.html">Read More</a>
+                  <div class="blog-content">
+                    <div class="blog-meta">
+                      <span><i class="bi bi-calendar3"></i> 5 Enero, 2026</span>
+                      <span><i class="bi bi-person"></i> Carlos Puero</span>
+                      <span><i class="bi bi-clock"></i> 6 min</span>
+                    </div>
+                    <h3 class="blog-title">SEO Local: Estrategias para Perú y Ecuador</h3>
+                    <p class="blog-excerpt">Optimiza tu sitio web para mercados binacionales. Keywords regionales, Google My Business, y técnicas de SEO específicas para Lima y Guayaquil.</p>
+                    <div class="blog-tags">
+                      <span class="tag">SEO</span>
+                      <span class="tag">Marketing Digital</span>
+                      <span class="tag">Local</span>
+                    </div>
+                    <a href="blog-seo-regional.html" class="read-more">
+                      Leer más <i class="bi bi-arrow-right"></i>
+                    </a>
                   </div>
+                </div>
+              </div>
 
-                </article>
-              </div><!-- End post list item -->
-
-              <div class="col-lg-6">
-                <article class="d-flex flex-column">
-
-                  <div class="post-img">
-                    <img src="assets/img/blog/blog-2.jpg" alt="" class="img-fluid">
+              <!-- Artículo 3: Tendencias Web 2026 -->
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="blog-card">
+                  <div class="position-relative">
+                    <img src="https://images.unsplash.com/photo-1555066931-4135d5eaa634?auto=format&fit=crop&w=800&q=80" 
+                         class="blog-image" 
+                         alt="Tendencias Web 2026 - Pucusoft"
+                         loading="lazy">
+                    <div class="category-badge">Tecnología</div>
                   </div>
-
-                  <h2 class="title">
-                    <a href="blog-details.html">Nisi magni odit consequatur autem nulla dolorem</a>
-                  </h2>
-
-                  <div class="meta-top">
-                    <ul>
-                      <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-details.html">John Doe</a></li>
-                      <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-details.html"><time datetime="2022-01-01">Jan 1, 2022</time></a></li>
-                      <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-details.html">12 Comments</a></li>
-                    </ul>
+                  <div class="blog-content">
+                    <div class="blog-meta">
+                      <span><i class="bi bi-calendar3"></i> Próximamente</span>
+                      <span><i class="bi bi-person"></i> Pucusoft Team</span>
+                      <span><i class="bi bi-clock"></i> 5 min</span>
+                    </div>
+                    <h3 class="blog-title">Tendencias Web 2026: Lo que Viene</h3>
+                    <p class="blog-excerpt">Descubre las nuevas tecnologías y frameworks que dominarán el desarrollo web este año. IA, Web3, y las últimas innovaciones.</p>
+                    <div class="blog-tags">
+                      <span class="tag">Tendencias</span>
+                      <span class="tag">Tecnología</span>
+                      <span class="tag">2026</span>
+                    </div>
+                    <a href="#" class="read-more" style="opacity: 0.6; cursor: not-allowed;">
+                      Próximamente <i class="bi bi-clock"></i>
+                    </a>
                   </div>
+                </div>
+              </div>
 
-                  <div class="content">
-                    <p>
-                      Incidunt voluptate sit temporibus aperiam. Quia vitae aut sint ullam quis illum voluptatum et. Quo libero rerum voluptatem pariatur nam.
-                    </p>
+              <!-- Artículo 4: Seguridad Web -->
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+                <div class="blog-card">
+                  <div class="position-relative">
+                    <img src="https://images.unsplash.com/photo-1563013549-7b749dd1e0c3?auto=format&fit=crop&w=800&q=80" 
+                         class="blog-image" 
+                         alt="Seguridad Web - Pucusoft"
+                         loading="lazy">
+                    <div class="category-badge">Seguridad</div>
                   </div>
-
-                  <div class="read-more mt-auto align-self-end">
-                    <a href="blog-details.html">Read More</a>
+                  <div class="blog-content">
+                    <div class="blog-meta">
+                      <span><i class="bi bi-calendar3"></i> Próximamente</span>
+                      <span><i class="bi bi-person"></i> Pucusoft Team</span>
+                      <span><i class="bi bi-clock"></i> 7 min</span>
+                    </div>
+                    <h3 class="blog-title">Seguridad Web: Protege tu Negocio</h3>
+                    <p class="blog-excerpt">Mejores prácticas de seguridad para proteger tu sitio web y datos de clientes. SSL, firewalls y medidas preventivas.</p>
+                    <div class="blog-tags">
+                      <span class="tag">Seguridad</span>
+                      <span class="tag">Protección</span>
+                      <span class="tag">Cyberseguridad</span>
+                    </div>
+                    <a href="#" class="read-more" style="opacity: 0.6; cursor: not-allowed;">
+                      Próximamente <i class="bi bi-clock"></i>
+                    </a>
                   </div>
+                </div>
+              </div>
 
-                </article>
-              </div><!-- End post list item -->
-
-              <div class="col-lg-6">
-                <article class="d-flex flex-column">
-
-                  <div class="post-img">
-                    <img src="assets/img/blog/blog-3.jpg" alt="" class="img-fluid">
-                  </div>
-
-                  <h2 class="title">
-                    <a href="blog-details.html">Possimus soluta ut id suscipit ea ut. In quo quia et soluta libero sit sint.</a>
-                  </h2>
-
-                  <div class="meta-top">
-                    <ul>
-                      <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-details.html">John Doe</a></li>
-                      <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-details.html"><time datetime="2022-01-01">Jan 1, 2022</time></a></li>
-                      <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-details.html">12 Comments</a></li>
-                    </ul>
-                  </div>
-
-                  <div class="content">
-                    <p>
-                      Aut iste neque ut illum qui perspiciatis similique recusandae non. Fugit autem dolorem labore omnis et. Eum temporibus fugiat voluptate enim tenetur sunt omnis.
-                    </p>
-                  </div>
-
-                  <div class="read-more mt-auto align-self-end">
-                    <a href="blog-details.html">Read More</a>
-                  </div>
-
-                </article>
-              </div><!-- End post list item -->
-
-              <div class="col-lg-6">
-                <article class="d-flex flex-column">
-
-                  <div class="post-img">
-                    <img src="assets/img/blog/blog-4.jpg" alt="" class="img-fluid">
-                  </div>
-
-                  <h2 class="title">
-                    <a href="blog-details.html">Non rem rerum nam cum quo minus. Dolor distinctio deleniti explicabo eius exercitationem.</a>
-                  </h2>
-
-                  <div class="meta-top">
-                    <ul>
-                      <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-details.html">John Doe</a></li>
-                      <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-details.html"><time datetime="2022-01-01">Jan 1, 2022</time></a></li>
-                      <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-details.html">12 Comments</a></li>
-                    </ul>
-                  </div>
-
-                  <div class="content">
-                    <p>
-                      Aspernatur rerum perferendis et sint. Voluptates cupiditate voluptas atque quae. Rem veritatis rerum enim et autem. Saepe atque cum eligendi eaque iste omnis a qui.
-                    </p>
-                  </div>
-
-                  <div class="read-more mt-auto align-self-end">
-                    <a href="blog-details.html">Read More</a>
-                  </div>
-
-                </article>
-              </div><!-- End post list item -->
-
-              <div class="col-lg-6">
-                <article class="d-flex flex-column">
-
-                  <div class="post-img">
-                    <img src="assets/img/blog/blog-5.jpg" alt="" class="img-fluid">
-                  </div>
-
-                  <h2 class="title">
-                    <a href="blog-details.html">Accusamus quaerat aliquam qui debitis facilis consequatur</a>
-                  </h2>
-
-                  <div class="meta-top">
-                    <ul>
-                      <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-details.html">John Doe</a></li>
-                      <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-details.html"><time datetime="2022-01-01">Jan 1, 2022</time></a></li>
-                      <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-details.html">12 Comments</a></li>
-                    </ul>
-                  </div>
-
-                  <div class="content">
-                    <p>
-                      In itaque assumenda aliquam voluptatem qui temporibus iusto nisi quia. Autem vitae quas aperiam nesciunt mollitia tempora odio omnis. Ipsa odit sit ut amet necessitatibus. Quo ullam ut corrupti autem consequuntur totam dolorem.
-                    </p>
-                  </div>
-
-                  <div class="read-more mt-auto align-self-end">
-                    <a href="blog-details.html">Read More</a>
-                  </div>
-
-                </article>
-              </div><!-- End post list item -->
-
-              <div class="col-lg-6">
-                <article class="d-flex flex-column">
-
-                  <div class="post-img">
-                    <img src="assets/img/blog/blog-6.jpg" alt="" class="img-fluid">
-                  </div>
-
-                  <h2 class="title">
-                    <a href="blog-details.html">Distinctio provident quibusdam numquam aperiam aut</a>
-                  </h2>
-
-                  <div class="meta-top">
-                    <ul>
-                      <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-details.html">John Doe</a></li>
-                      <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-details.html"><time datetime="2022-01-01">Jan 1, 2022</time></a></li>
-                      <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-details.html">12 Comments</a></li>
-                    </ul>
-                  </div>
-
-                  <div class="content">
-                    <p>
-                      Expedita et temporibus eligendi enim molestiae est architecto praesentium dolores. Illo laboriosam officiis quis. Labore officia quia sit voluptatem nisi est dignissimos totam. Et voluptate et consectetur voluptatem id dolor magni impedit. Omnis dolores sit.
-                    </p>
-                  </div>
-
-                  <div class="read-more mt-auto align-self-end">
-                    <a href="blog-details.html">Read More</a>
-                  </div>
-
-                </article>
-              </div><!-- End post list item -->
-
-            </div><!-- End blog posts list -->
-
-            <div class="blog-pagination">
-              <ul class="justify-content-center">
-                <li><a href="#">1</a></li>
-                <li class="active"><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-              </ul>
-            </div><!-- End blog pagination -->
+            </div>
 
           </div>
 
+          <!-- Sidebar -->
           <div class="col-lg-4">
 
-            <div class="sidebar">
+            <!-- Categorías -->
+            <div class="blog-sidebar" data-aos="fade-up" data-aos-delay="200">
+              <h4 class="sidebar-title">Categorías</h4>
+              <ul class="sidebar-list">
+                <li><a href="#" style="color: inherit; text-decoration: none;">Desarrollo Web (3)</a></li>
+                <li><a href="#" style="color: inherit; text-decoration: none;">SEO (2)</a></li>
+                <li><a href="#" style="color: inherit; text-decoration: none;">Marketing Digital (2)</a></li>
+                <li><a href="#" style="color: inherit; text-decoration: none;">Seguridad (1)</a></li>
+                <li><a href="#" style="color: inherit; text-decoration: none;">Tecnología (2)</a></li>
+              </ul>
+            </div>
 
-              <div class="sidebar-item search-form">
-                <h3 class="sidebar-title">Search</h3>
-                <form action="" class="mt-3">
-                  <input type="text">
-                  <button type="submit"><i class="bi bi-search"></i></button>
-                </form>
-              </div><!-- End sidebar search formn-->
+            <!-- Artículos Populares -->
+            <div class="blog-sidebar" data-aos="fade-up" data-aos-delay="300">
+              <h4 class="sidebar-title">Artículos Populares</h4>
+              <ul class="sidebar-list">
+                <li><a href="blog-desarrollo-medida.html" style="color: inherit; text-decoration: none;">Desarrollo Web a Medida: ¿Vale la Pena?</a></li>
+                <li><a href="blog-seo-regional.html" style="color: inherit; text-decoration: none;">SEO Local: Estrategias para Perú y Ecuador</a></li>
+                <li><a href="#" style="color: inherit; text-decoration: none;">Tendencias Web 2026</a></li>
+                <li><a href="#" style="color: inherit; text-decoration: none;">Seguridad Web: Protege tu Negocio</a></li>
+              </ul>
+            </div>
 
-              <div class="sidebar-item categories">
-                <h3 class="sidebar-title">Categories</h3>
-                <ul class="mt-3">
-                  <li><a href="#">General <span>(25)</span></a></li>
-                  <li><a href="#">Lifestyle <span>(12)</span></a></li>
-                  <li><a href="#">Travel <span>(5)</span></a></li>
-                  <li><a href="#">Design <span>(22)</span></a></li>
-                  <li><a href="#">Creative <span>(8)</span></a></li>
-                  <li><a href="#">Educaion <span>(14)</span></a></li>
-                </ul>
-              </div><!-- End sidebar categories-->
-
-              <div class="sidebar-item recent-posts">
-                <h3 class="sidebar-title">Recent Posts</h3>
-
-                <div class="mt-3">
-
-                  <div class="post-item mt-3">
-                    <img src="assets/img/blog/blog-recent-1.jpg" alt="" class="flex-shrink-0">
-                    <div>
-                      <h4><a href="blog-post.html">Nihil blanditiis at in nihil autem</a></h4>
-                      <time datetime="2020-01-01">Jan 1, 2020</time>
-                    </div>
-                  </div><!-- End recent post item-->
-
-                  <div class="post-item">
-                    <img src="assets/img/blog/blog-recent-2.jpg" alt="" class="flex-shrink-0">
-                    <div>
-                      <h4><a href="blog-post.html">Quidem autem et impedit</a></h4>
-                      <time datetime="2020-01-01">Jan 1, 2020</time>
-                    </div>
-                  </div><!-- End recent post item-->
-
-                  <div class="post-item">
-                    <img src="assets/img/blog/blog-recent-3.jpg" alt="" class="flex-shrink-0">
-                    <div>
-                      <h4><a href="blog-post.html">Id quia et et ut maxime similique occaecati ut</a></h4>
-                      <time datetime="2020-01-01">Jan 1, 2020</time>
-                    </div>
-                  </div><!-- End recent post item-->
-
-                  <div class="post-item">
-                    <img src="assets/img/blog/blog-recent-4.jpg" alt="" class="flex-shrink-0">
-                    <div>
-                      <h4><a href="blog-post.html">Laborum corporis quo dara net para</a></h4>
-                      <time datetime="2020-01-01">Jan 1, 2020</time>
-                    </div>
-                  </div><!-- End recent post item-->
-
-                  <div class="post-item">
-                    <img src="assets/img/blog/blog-recent-5.jpg" alt="" class="flex-shrink-0">
-                    <div>
-                      <h4><a href="blog-post.html">Et dolores corrupti quae illo quod dolor</a></h4>
-                      <time datetime="2020-01-01">Jan 1, 2020</time>
-                    </div>
-                  </div><!-- End recent post item-->
-
+            <!-- Newsletter -->
+            <div class="newsletter-box" data-aos="fade-up" data-aos-delay="400" id="newsletter">
+              <h4 class="mb-3">Suscríbete al Newsletter</h4>
+              <p class="mb-4">Recibe los últimos artículos sobre tecnología y marketing digital directamente en tu correo.</p>
+              <form action="" method="post">
+                <div class="mb-3">
+                  <input type="email" name="email" class="form-control" placeholder="Tu correo electrónico" required>
                 </div>
-
-              </div><!-- End sidebar recent posts-->
-
-              <div class="sidebar-item tags">
-                <h3 class="sidebar-title">Tags</h3>
-                <ul class="mt-3">
-                  <li><a href="#">App</a></li>
-                  <li><a href="#">IT</a></li>
-                  <li><a href="#">Business</a></li>
-                  <li><a href="#">Mac</a></li>
-                  <li><a href="#">Design</a></li>
-                  <li><a href="#">Office</a></li>
-                  <li><a href="#">Creative</a></li>
-                  <li><a href="#">Studio</a></li>
-                  <li><a href="#">Smart</a></li>
-                  <li><a href="#">Tips</a></li>
-                  <li><a href="#">Marketing</a></li>
-                </ul>
-              </div><!-- End sidebar tags-->
-
-            </div><!-- End Blog Sidebar -->
+                <button type="submit" class="btn btn-light w-100">Suscribirse</button>
+              </form>
+            </div>
 
           </div>
 
         </div>
 
       </div>
-    </section><!-- End Blog Section -->
+    </section><!-- End Blog Posts Section -->
 
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
-
     <div class="footer-content">
       <div class="container">
         <div class="row">
 
           <div class="col-lg-3 col-md-6">
             <div class="footer-info">
-              <h3>HeroBiz</h3>
+              <h3>Pucusoft</h3>
               <p>
-                A108 Adam Street <br>
-                NY 535022, USA<br><br>
-                <strong>Phone:</strong> +1 5589 55488 55<br>
-                <strong>Email:</strong> info@example.com<br>
+                Calle M. Unamuno<br>
+                Lima 216, Peru<br><br>
+                <strong>Phone:</strong> +51 917 955 859<br>
+                <strong>Phone:</strong> +593 0987321055<br>
+                <strong>Email:</strong> <a href="mailto:josephpuero@aol.com" style="color: inherit;">josephpuero@aol.com</a><br>
               </p>
             </div>
           </div>
 
           <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
+            <h4>Enlaces útiles</h4>
             <ul>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Privacy policy</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="index.html">Home</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="index.html#about">Somos</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="index.html#services">Servicios</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="index.html#portfolio">Portafolio</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="blog.html">Blog</a></li>
             </ul>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
+            <h4>Otros Servicios</h4>
             <ul>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Graphic Design</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="index.html">Web Design</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="index.html">Web Development</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="index.html">Product Management</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="index.html">Marketing</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="index.html">Graphic Design</a></li>
             </ul>
           </div>
 
           <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+            <h4>Noticias</h4>
+            <a href="https://www.threads.net/@pucusoftpuero">
+              <i class="bi bi-threads"></i>
+              <p>Síguenos en Threads para las últimas novedades</p>
+            </a>
             <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
+              <input type="email" name="email" placeholder="Tu email">
+              <input type="submit" value="Suscribirse">
             </form>
-
           </div>
 
         </div>
@@ -517,41 +522,30 @@
 
         <div class="d-flex flex-column align-items-center align-items-lg-start">
           <div class="copyright">
-            &copy; Copyright <strong><span>HeroBiz</span></strong>. All Rights Reserved
+            &copy; Copyright <strong><span>pucusoftpuero</span></strong>. All Rights Reserved
           </div>
           <div class="credits">
-            <!-- All the links in the footer should remain intact. -->
-            <!-- You can delete the links only if you purchased the pro version. -->
-            <!-- Licensing information: https://bootstrapmade.com/license/ -->
-            <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/herobiz-bootstrap-business-template/ -->
-            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            &copy; 2026 Pucusoft - Todos los derechos reservados
           </div>
         </div>
 
         <div class="social-links order-first order-lg-last mb-3 mb-lg-0">
-          <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-          <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-          <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+          <a href="https://twitter.com/joseph_puero" class="twitter"><i class="bi bi-twitter"></i></a>
+          <a href="https://www.facebook.com/puerocuerosoft" class="facebook"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/pucusoftpuero" class="instagram"><i class="bi bi-instagram"></i></a>
           <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
-          <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+          <a href="https://www.linkedin.com/in/puerojose" class="linkedin"><i class="bi bi-linkedin"></i></a>
         </div>
 
       </div>
     </div>
-
   </footer><!-- End Footer -->
 
   <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  <div id="preloader"></div>
-
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>

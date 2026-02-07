@@ -379,7 +379,7 @@
           <li><a class="nav-link scrollto" href="index.html#about">Somos</a></li>
           <li><a class="nav-link scrollto" href="index.html#services">Servicios</a></li>
           <li><a class="nav-link scrollto" href="index.html#portfolio">Portafolio</a></li>
-          <li><a class="nav-link scrollto" href="#soporte-tecnico">Soporte Técnico</a></li>
+          <li><a class="nav-link" href="soporte-tecnico.html">Soporte Técnico</a></li>
          <!--  <li><a class="nav-link scrollto" href="index.html#team">Team</a></li>-->
          <!-- <li><a href="blog.html">Blog</a></li>
            <li class="dropdown megamenu"><a href="#"><span> Menu</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
@@ -1224,12 +1224,22 @@
     </section><!-- End Custom Projects Section -->
     
     <!-- ======= Soporte Técnico Section ======= -->
-    <section id="soporte-tecnico" class="services">
+    <section id="soporte-tecnico" class="pricing">
       <div class="container" data-aos="fade-up">
-
+        
         <div class="section-header">
           <h2>Soporte Técnico Profesional</h2>
           <p>En Pucusoft, entendemos la importancia de mantener tus equipos tecnológicos funcionando de manera óptima. Contamos con técnicos certificados con amplia experiencia en diagnóstico, mantenimiento y reparación de equipos informáticos para usuarios particulares y empresas.</p>
+          
+          <!-- Currency Selector para Soporte Técnico -->
+          <div class="currency-selector" style="margin: 20px 0;">
+            <label for="soporte-currency" style="font-weight: bold; margin-right: 10px;">Moneda:</label>
+            <select id="soporte-currency" onchange="updateSoportePrices()" style="padding: 8px 15px; border-radius: 5px; border: 1px solid #ddd; font-size: 16px;">
+              <option value="PEN">Soles (S/)</option>
+              <option value="USD">Dólares ($)</option>
+            </select>
+            <small id="soporte-exchange-rate" style="margin-left: 15px; color: #666;"></small>
+          </div>
         </div>
 
         <div class="row gy-4">
@@ -2134,6 +2144,14 @@
       const currency = document.getElementById('soporte-currency') ? document.getElementById('soporte-currency').value : 'PEN';
       const rate = exchangeRates[currency];
       const symbol = currency === 'PEN' ? 'S/' : '$';
+      
+      // Update exchange rate display for soporte técnico
+      const exchangeRateEl = document.getElementById('soporte-exchange-rate');
+      if (currency === 'USD') {
+        exchangeRateEl.textContent = `Tipo de cambio: 1 S/ = ${exchangeRates.USD} $ (aproximado)`;
+      } else {
+        exchangeRateEl.textContent = '';
+      }
       
       // Update all soporte prices
       document.querySelectorAll('.soporte-price').forEach(el => {
