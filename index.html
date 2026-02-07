@@ -124,9 +124,7 @@
             "@type": "Service",
             "name": "Web Corporativa",
             "description": "Sitios web institucionales para empresas"
-          },
-          "price": "600",
-          "priceCurrency": "PEN"
+          }
         },
         {
           "@type": "Offer",
@@ -134,9 +132,7 @@
             "@type": "Service",
             "name": "Web App a Medida",
             "description": "Aplicaciones empresariales completas y personalizadas"
-          },
-          "price": "3000",
-          "priceCurrency": "PEN"
+          }
         },
         {
           "@type": "Offer",
@@ -144,9 +140,7 @@
             "@type": "Service",
             "name": "E-commerce Avanzado",
             "description": "Tienda online con funcionalidades premium"
-          },
-          "price": "2500",
-          "priceCurrency": "PEN"
+          }
         },
         {
           "@type": "Offer",
@@ -154,9 +148,7 @@
             "@type": "Service",
             "name": "Sistema ERP/CRM",
             "description": "Gestión empresarial integral"
-          },
-          "price": "5000",
-          "priceCurrency": "PEN"
+          }
         }
       ]
     }
@@ -191,6 +183,174 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <!-- Estilos adicionales para Soporte Técnico -->
+  <style>
+    .service-box {
+      background: #fff;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      height: 100%;
+      transition: all 0.3s ease;
+      border: 1px solid #e9ecef;
+    }
+    
+    .service-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+      border-color: #667eea;
+    }
+    
+    .service-box .icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    
+    .service-box .icon i {
+      font-size: 24px;
+      color: white;
+    }
+    
+    .service-box h3 {
+      color: #2c3e50;
+      font-size: 22px;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+    
+    .service-box h4 {
+      color: #667eea;
+      font-size: 16px;
+      margin: 20px 0 10px 0;
+      font-weight: 600;
+    }
+    
+    .service-box ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .service-box ul li {
+      padding: 8px 0;
+      color: #555;
+      font-size: 14px;
+      display: flex;
+      align-items: flex-start;
+    }
+    
+    .service-box ul li i {
+      color: #28a745;
+      margin-right: 10px;
+      margin-top: 2px;
+      font-size: 14px;
+    }
+    
+    .pricing-info {
+      margin-top: 20px;
+      padding: 15px;
+      background: #f8f9fa;
+      border-radius: 8px;
+      border-left: 4px solid #667eea;
+    }
+    
+    .pricing-info h4 {
+      margin: 0 0 10px 0;
+      color: #2c3e50;
+      font-size: 16px;
+    }
+    
+    .currency-toggle {
+      margin-bottom: 10px;
+    }
+    
+    .currency-toggle select {
+      padding: 5px 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+    
+    .price-display {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    
+    .price-main {
+      font-size: 20px;
+      font-weight: bold;
+      color: #667eea;
+    }
+    
+    .price-note {
+      font-size: 12px;
+      color: #666;
+    }
+    
+    .cta-section {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 40px;
+      border-radius: 15px;
+      margin-top: 40px;
+    }
+    
+    .cta-section h3 {
+      color: white;
+      margin-bottom: 15px;
+    }
+    
+    .cta-section p {
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 25px;
+    }
+    
+    .cta-section .btn-get-started {
+      background: white;
+      color: #667eea;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    
+    .cta-section .btn-get-started:hover {
+      background: #f8f9fa;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+    
+    .soporte-price {
+      color: #667eea;
+      font-weight: bold;
+    }
+    
+    @media (max-width: 768px) {
+      .service-box {
+        padding: 20px;
+        margin-bottom: 20px;
+      }
+      
+      .cta-section {
+        padding: 30px 20px;
+      }
+      
+      .cta-section .d-flex {
+        flex-direction: column;
+        gap: 15px !important;
+      }
+    }
+  </style>
+
   <!-- =======================================================
   * Template Name: HeroBiz
   * Updated: Sep 18 2023 with Bootstrap v5.3.2
@@ -219,6 +379,7 @@
           <li><a class="nav-link scrollto" href="index.html#about">Somos</a></li>
           <li><a class="nav-link scrollto" href="index.html#services">Servicios</a></li>
           <li><a class="nav-link scrollto" href="index.html#portfolio">Portafolio</a></li>
+          <li><a class="nav-link scrollto" href="#soporte-tecnico">Soporte Técnico</a></li>
          <!--  <li><a class="nav-link scrollto" href="index.html#team">Team</a></li>-->
          <!-- <li><a href="blog.html">Blog</a></li>
            <li class="dropdown megamenu"><a href="#"><span> Menu</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
@@ -231,7 +392,7 @@
               <li>
                 <a href="#">Column 2 link 1</a>
                 <a href="#">Column 2 link 2</a>
-                <a href="#">Column 3 link 3</a>
+                <a href="#">Column 2 link 3</a>
               </li>
               <li>
                 <a href="#">Column 3 link 1</a>
@@ -1062,6 +1223,247 @@
       </div>
     </section><!-- End Custom Projects Section -->
     
+    <!-- ======= Soporte Técnico Section ======= -->
+    <section id="soporte-tecnico" class="services">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Soporte Técnico Profesional</h2>
+          <p>En Pucusoft, entendemos la importancia de mantener tus equipos tecnológicos funcionando de manera óptima. Contamos con técnicos certificados con amplia experiencia en diagnóstico, mantenimiento y reparación de equipos informáticos para usuarios particulares y empresas.</p>
+        </div>
+
+        <div class="row gy-4">
+
+          <!-- Mantenimiento Preventivo -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-box">
+              <div class="icon"><i class="bi bi-shield-check"></i></div>
+              <h3>Mantenimiento Preventivo Integral</h3>
+              <p>Anticípate a los problemas y asegura la longevidad y rendimiento óptimo de tus equipos. Nuestro mantenimiento preventivo es una inversión inteligente para evitar fallas costosas.</p>
+              
+              <h4>Este servicio incluye:</h4>
+              <ul>
+                <li><i class="bi bi-check-circle"></i> Limpieza profunda de hardware (interno y externo)</li>
+                <li><i class="bi bi-check-circle"></i> Revisión y optimización del sistema de refrigeración</li>
+                <li><i class="bi bi-check-circle"></i> Aplicación de pasta térmica de alta calidad</li>
+                <li><i class="bi bi-check-circle"></i> Diagnóstico y optimización de disco duro/SSD</li>
+                <li><i class="bi bi-check-circle"></i> Actualización de sistema operativo y drivers</li>
+                <li><i class="bi bi-check-circle"></i> Escaneo y eliminación de malware</li>
+                <li><i class="bi bi-check-circle"></i> Optimización del arranque y rendimiento</li>
+                <li><i class="bi bi-check-circle"></i> Informe detallado del estado del equipo</li>
+              </ul>
+              
+              <div class="pricing-info">
+                <h4>Precios:</h4>
+                <div class="currency-toggle">
+                  <select id="soporte-currency" class="form-select">
+                    <option value="PEN">Soles (S/)</option>
+                    <option value="USD">Dólares ($)</option>
+                  </select>
+                </div>
+                <div class="price-display">
+                  <span class="price-main" data-pen="80" data-usd="22">S/ 80</span>
+                  <span class="price-note">+ impuesto</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Reparación Especializada -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-box">
+              <div class="icon"><i class="bi bi-tools"></i></div>
+              <h3>Reparación Especializada y Mantenimiento Correctivo</h3>
+              <p>Cuando tus equipos presentan fallas, nuestro equipo técnico interviene con diagnósticos precisos y soluciones efectivas, utilizando repuestos originales y garantizando cada reparación.</p>
+              
+              <h4>Cubrimos una amplia gama de problemas:</h4>
+              <ul>
+                <li><i class="bi bi-check-circle"></i> Diagnóstico avanzado de fallas de hardware y software</li>
+                <li><i class="bi bi-check-circle"></i> Reparación o reemplazo de componentes (tarjeta madre, fuente, RAM)</li>
+                <li><i class="bi bi-check-circle"></i> Solución a problemas de arranque y sobrecalentamiento</li>
+                <li><i class="bi bi-check-circle"></i> Reparación de pantallas, teclados y periféricos</li>
+                <li><i class="bi bi-check-circle"></i> Recuperación de sistemas operativos y eliminación de virus</li>
+                <li><i class="bi bi-check-circle"></i> Soluciones para problemas de conectividad y redes</li>
+                <li><i class="bi bi-check-circle"></i> Optimización post-reparación para asegurar estabilidad</li>
+              </ul>
+              
+              <div class="pricing-info">
+                <h4>Precios:</h4>
+                <div class="price-display">
+                  <span class="price-main" data-pen="50" data-usd="14">S/ 50</span>
+                  <span class="price-note">Diagnóstico inicial + impuesto</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Soluciones de Redes -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-box">
+              <div class="icon"><i class="bi bi-wifi"></i></div>
+              <h3>Soluciones de Redes y Conectividad</h3>
+              <p>Diseñamos, implementamos y mantenemos soluciones de red robustas y seguras para hogares y empresas, asegurando conectividad estable y de alto rendimiento.</p>
+              
+              <h4>Nuestros servicios de redes incluyen:</h4>
+              <ul>
+                <li><i class="bi bi-check-circle"></i> Diseño e implementación de redes LAN y WLAN (Wi-Fi)</li>
+                <li><i class="bi bi-check-circle"></i> Cableado estructurado certificado (Cat 5e, Cat 6, Cat 6A)</li>
+                <li><i class="bi bi-check-circle"></i> Configuración avanzada de routers y access points</li>
+                <li><i class="bi bi-check-circle"></i> Implementación de firewalls y seguridad perimetral</li>
+                <li><i class="bi bi-check-circle"></i> Optimización de cobertura Wi-Fi y eliminación de zonas muertas</li>
+                <li><i class="bi bi-check-circle"></i> Configuración de VPNs y acceso remoto seguro</li>
+                <li><i class="bi bi-check-circle"></i> Instalación y configuración de servidores y NAS</li>
+                <li><i class="bi bi-check-circle"></i> Mantenimiento y monitoreo proactivo de redes</li>
+              </ul>
+              
+              <div class="pricing-info">
+                <h4>Precios:</h4>
+                <div class="price-display">
+                  <span class="price-main" data-pen="120" data-usd="32">S/ 120</span>
+                  <span class="price-note">Configuración básica + impuesto</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recuperación de Datos -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-box">
+              <div class="icon"><i class="bi bi-hdd-rack"></i></div>
+              <h3>Recuperación Avanzada de Datos</h3>
+              <p>¿Has perdido información valiosa? Utilizamos técnicas avanzadas y herramientas especializadas para recuperar datos de discos duros, memorias USB y otros dispositivos de almacenamiento.</p>
+              
+              <h4>Recuperamos datos en diversos escenarios:</h4>
+              <ul>
+                <li><i class="bi bi-check-circle"></i> Discos duros con fallas mecánicas o electrónicas</li>
+                <li><i class="bi bi-check-circle"></i> Archivos eliminados accidentalmente o por formateo</li>
+                <li><i class="bi bi-check-circle"></i> Particiones corruptas o sistemas de archivos dañados</li>
+                <li><i class="bi bi-check-circle"></i> Daños por virus, ransomware u otro malware</li>
+                <li><i class="bi bi-check-circle"></i> Unidades SSD que no son reconocidas o no arrancan</li>
+                <li><i class="bi bi-check-circle"></i> Dispositivos afectados por sobretensión o daños por líquidos</li>
+                <li><i class="bi bi-check-circle"></i> Diagnóstico gratuito y presupuesto sin compromiso</li>
+              </ul>
+              
+              <div class="pricing-info">
+                <h4>Precios:</h4>
+                <div class="price-display">
+                  <span class="price-main" data-pen="150" data-usd="40">S/ 150</span>
+                  <span class="price-note">Diagnóstico + impuesto</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Planes de Soporte Técnico -->
+        <div class="section-header mt-5">
+          <h2>Planes de Soporte Técnico Flexibles</h2>
+          <p>Planes adaptados a tus necesidades particulares o empresariales con atención personalizada y tiempos de respuesta garantizados.</p>
+        </div>
+
+        <div class="row gy-4">
+
+          <!-- Diagnóstico y Consulta -->
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="pricing-item">
+              <div class="pricing-header">
+                <h3>Diagnóstico y Consulta</h3>
+                <h4><sup>Desde</sup><span class="soporte-price" data-pen="30" data-usd="8">S/ 30</span></h4>
+              </div>
+              <ul>
+                <li><i class="bi bi-check"></i> Evaluación inicial del equipo</li>
+                <li><i class="bi bi-check"></i> Diagnóstico de fallas menores</li>
+                <li><i class="bi bi-check"></i> Limpieza de hardware</li>
+                <li><i class="bi bi-check"></i> Optimización de sistema</li>
+                <li><i class="bi bi-check"></i> Asesoría técnica básica</li>
+              </ul>
+              <div class="text-center mt-auto">
+                <a href="#contact" class="buy-btn">Consultar Ahora</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mantenimiento Completo -->
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="pricing-item">
+              <div class="pricing-header">
+                <h3>Mantenimiento Completo</h3>
+                <h4><sup>Desde</sup><span class="soporte-price" data-pen="80" data-usd="22">S/ 80</span></h4>
+              </div>
+              <ul>
+                <li><i class="bi bi-check"></i> Mantenimiento preventivo integral</li>
+                <li><i class="bi bi-check"></i> Limpieza profunda de componentes</li>
+                <li><i class="bi bi-check"></i> Aplicación de pasta térmica</li>
+                <li><i class="bi bi-check"></i> Optimización avanzada del sistema</li>
+                <li><i class="bi bi-check"></i> Revisión de seguridad y malware</li>
+                <li><i class="bi bi-check"></i> Backup básico de datos (opcional)</li>
+              </ul>
+              <div class="text-center mt-auto">
+                <a href="#contact" class="buy-btn">Agendar Mantenimiento</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Soporte Empresarial -->
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="pricing-item">
+              <div class="pricing-header">
+                <h3>Soporte Empresarial</h3>
+                <h4><sup>Desde</sup><span class="soporte-price" data-pen="200" data-usd="54">S/ 200</span></h4>
+              </div>
+              <ul>
+                <li><i class="bi bi-check"></i> Planes mensuales o por horas</li>
+                <li><i class="bi bi-check"></i> Soporte técnico presencial y remoto</li>
+                <li><i class="bi bi-check"></i> Tiempos de respuesta prioritarios</li>
+                <li><i class="bi bi-check"></i> Mantenimiento preventivo programado</li>
+                <li><i class="bi bi-check"></i> Gestión de infraestructura de TI</li>
+                <li><i class="bi bi-check"></i> Asesoría en adquisición de tecnología</li>
+              </ul>
+              <div class="text-center mt-auto">
+                <a href="#contact" class="buy-btn">Cotizar Plan Empresarial</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Soluciones Personalizadas -->
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="pricing-item featured">
+              <div class="pricing-header">
+                <h3>Soluciones Personalizadas</h3>
+                <h4><sup>Consultar</sup></h4>
+              </div>
+              <ul>
+                <li><i class="bi bi-check"></i> Planes completamente personalizados</li>
+                <li><i class="bi bi-check"></i> Evaluación de necesidades específicas</li>
+                <li><i class="bi bi-check"></i> Propuesta a medida de tu empresa</li>
+                <li><i class="bi bi-check"></i> Soporte dedicado 24/7 (opcional)</li>
+                <li><i class="bi bi-check"></i> Gestión de proyectos integrales</li>
+                <li><i class="bi bi-check"></i> Capacitación técnica para tu equipo</li>
+              </ul>
+              <div class="text-center mt-auto">
+                <a href="#contact" class="buy-btn">Solicitar Propuesta</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- CTA Section -->
+        <div class="cta-section mt-5">
+          <div class="text-center">
+            <h3>¿Tu Equipo Necesita Atención Profesional?</h3>
+            <p>No dejes que los problemas técnicos afecten tu productividad. Contáctanos hoy mismo para un diagnóstico gratuito.</p>
+            <div class="d-flex justify-content-center gap-3 mt-4">
+              <a href="#contact" class="btn-get-started scrollto">Solicitar Servicio Técnico</a>
+              <a href="tel:+51917955859" class="btn-get-started" style="background: #28a745;">Llamar Ahora</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Soporte Técnico Section -->
+    
     <!-- ======= GitHub Projects Section ======= -->
     <section id="github-projects" class="portfolio" style="background: #f8f9fa;">
       <div class="container" data-aos="fade-up">
@@ -1425,55 +1827,54 @@
     </section>
     <!-- End Team Section -->
 
-    <!--*************************************************************-->
-    <!-- ======= Recent Blog Posts Section ======= 
+    <!-- ======= Recent Blog Posts Section ======= -->
     <section id="recent-blog-posts" class="recent-blog-posts">
 
       <div class="container" data-aos="fade-up">
 
         <div class="section-header">
-          <h2>Blog</h2>
-          <p>Recent posts form our Blog</p>
+          <h2>Blog Pucusoft</h2>
+          <p>Tips, guías y tendencias sobre desarrollo web, e-commerce y marketing digital para empresas en Perú y Ecuador.</p>
         </div>
 
         <div class="row">
 
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
             <div class="post-box">
-              <div class="post-img"><img src="assets/img/blog/blog-1.jpg" class="img-fluid" alt=""></div>
+              <div class="post-img"><img src="assets/img/blog/blog-1.jpg" class="img-fluid" alt="Tiendas Online Perú 2026"></div>
               <div class="meta">
-                <span class="post-date">Tue, December 12</span>
-                <span class="post-author"> / Julia Parker</span>
+                <span class="post-date">15 Enero, 2026</span>
+                <span class="post-author"> / Jose Puero</span>
               </div>
-              <h3 class="post-title">Eum ad dolor et. Autem aut fugiat debitis voluptatem consequuntur sit</h3>
-              <p>Illum voluptas ab enim placeat. Adipisci enim velit nulla. Vel omnis laudantium. Asperiores eum ipsa est officiis. Modi cupiditate exercitationem qui magni est...</p>
-              <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+              <h3 class="post-title">Guía Completa: Tiendas Online en Perú 2026</h3>
+              <p>Descubre las tendencias del e-commerce peruano, las mejores pasarelas de pago como Yape y Plin, y cómo posicionar tu tienda online en el mercado digital peruano.</p>
+              <a href="#blog-tiendas-peru" class="readmore stretched-link"><span>Leer más</span><i class="bi bi-arrow-right"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="400">
             <div class="post-box">
-              <div class="post-img"><img src="assets/img/blog/blog-2.jpg" class="img-fluid" alt=""></div>
+              <div class="post-img"><img src="assets/img/blog/blog-2.jpg" class="img-fluid" alt="Desarrollo Web a Medida"></div>
               <div class="meta">
-                <span class="post-date">Fri, September 05</span>
-                <span class="post-author"> / Mario Douglas</span>
+                <span class="post-date">10 Enero, 2026</span>
+                <span class="post-author"> / Stephania Chehin</span>
               </div>
-              <h3 class="post-title">Et repellendus molestiae qui est sed omnis voluptates magnam</h3>
-              <p>Voluptatem nesciunt omnis libero autem tempora enim ut ipsam id. Odit quia ab eum assumenda. Quisquam omnis aliquid necessitatibus tempora consectetur doloribus...</p>
-              <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+              <h3 class="post-title">Desarrollo Web a Medida: ¿Vale la Pena?</h3>
+              <p>Análisis completo sobre los beneficios del desarrollo personalizado vs plantillas para empresas en Lima y Guayaquil. ROI, casos de éxito y mejores prácticas.</p>
+              <a href="#blog-desarrollo-medida" class="readmore stretched-link"><span>Leer más</span><i class="bi bi-arrow-right"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="600">
             <div class="post-box">
-              <div class="post-img"><img src="assets/img/blog/blog-3.jpg" class="img-fluid" alt=""></div>
+              <div class="post-img"><img src="assets/img/blog/blog-3.jpg" class="img-fluid" alt="SEO Regional Perú Ecuador"></div>
               <div class="meta">
-                <span class="post-date">Tue, July 27</span>
-                <span class="post-author"> / Lisa Hunter</span>
+                <span class="post-date">5 Enero, 2026</span>
+                <span class="post-author"> / Carlos Puero</span>
               </div>
-              <h3 class="post-title">Quia assumenda est et veritatis aut quae</h3>
-              <p>Quia nam eaque omnis explicabo similique eum quaerat similique laboriosam. Quis omnis repellat sed quae consectetur magnam veritatis dicta nihil...</p>
-              <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+              <h3 class="post-title">SEO Local: Estrategias para Perú y Ecuador</h3>
+              <p>Optimiza tu sitio web para mercados binacionales. Keywords regionales, Google My Business, y técnicas de SEO específicas para Lima y Guayaquil.</p>
+              <a href="#blog-seo-regional" class="readmore stretched-link"><span>Leer más</span><i class="bi bi-arrow-right"></i></a>
             </div>
           </div>
 
@@ -1482,7 +1883,6 @@
       </div>
 
     </section>
-                     -->
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
@@ -1683,6 +2083,17 @@
       storeMax: 2500
     };
     
+    // Soporte técnico prices in PEN
+    const soportePrices = {
+      diagnostico: 30,
+      mantenimiento: 80,
+      empresarial: 200,
+      mantenimientoCompleto: 80,
+      reparacion: 50,
+      redes: 120,
+      recuperacion: 150
+    };
+    
     function updatePrices() {
       const currency = document.getElementById('currency').value;
       const rate = exchangeRates[currency];
@@ -1696,9 +2107,12 @@
         exchangeRateEl.textContent = '';
       }
       
-      // Update standard pricing items
-      const priceElements = document.querySelectorAll('.pricing-header h4:not(.custom-price)');
+      // Update ONLY main pricing section items (exclude custom projects section completely)
+      const priceElements = document.querySelectorAll('#pricing .pricing-header h4');
       priceElements.forEach((el, index) => {
+        // Skip if this element contains "Consultar" (custom projects)
+        if (el.textContent.includes('Consultar')) return;
+        
         let basePrice;
         if (index === 0) basePrice = basePrices.landing;
         else if (index === 1) basePrice = basePrices.corporate;
@@ -1716,142 +2130,50 @@
       });
     }
     
+    function updateSoportePrices() {
+      const currency = document.getElementById('soporte-currency') ? document.getElementById('soporte-currency').value : 'PEN';
+      const rate = exchangeRates[currency];
+      const symbol = currency === 'PEN' ? 'S/' : '$';
+      
+      // Update all soporte prices
+      document.querySelectorAll('.soporte-price').forEach(el => {
+        const penPrice = parseFloat(el.dataset.pen);
+        const usdPrice = parseFloat(el.dataset.usd);
+        
+        if (currency === 'PEN') {
+          el.textContent = `${symbol} ${penPrice}`;
+        } else {
+          el.textContent = `${symbol} ${usdPrice}`;
+        }
+      });
+      
+      // Update service box prices
+      document.querySelectorAll('.price-main').forEach(el => {
+        const penPrice = parseFloat(el.dataset.pen);
+        const usdPrice = parseFloat(el.dataset.usd);
+        
+        if (currency === 'PEN') {
+          el.textContent = `${symbol} ${penPrice}`;
+        } else {
+          el.textContent = `${symbol} ${usdPrice}`;
+        }
+      });
+    }
+    
     // Initialize on page load
-    document.addEventListener('DOMContentLoaded', updatePrices);
+    document.addEventListener('DOMContentLoaded', function() {
+      updatePrices();
+      updateSoportePrices();
+      
+      // Add event listener for soporte currency
+      const soporteCurrency = document.getElementById('soporte-currency');
+      if (soporteCurrency) {
+        soporteCurrency.addEventListener('change', updateSoportePrices);
+      }
+    });
   </script>
 
-  <!-- Visit Counter with Telegram Notification -->
-  <script>
-    // Visit Counter with Telegram Notification
-    (function() {
-      // Get or create visit count
-      let visitCount = localStorage.getItem('pucusoft_visits') || 0;
-      visitCount = parseInt(visitCount) + 1;
-      localStorage.setItem('pucusoft_visits', visitCount);
-      
-      // Check if this is a new session (not just a page refresh)
-      const lastVisit = sessionStorage.getItem('pucusoft_last_visit');
-      const now = new Date().getTime();
-      const isNewSession = !lastVisit || (now - parseInt(lastVisit)) > 30 * 60 * 1000; // 30 minutes
-      
-      if (isNewSession) {
-        sessionStorage.setItem('pucusoft_last_visit', now);
-        
-        // Send notification to Telegram
-        sendTelegramNotification(visitCount);
-      }
-      
-      // Display visit counter
-      function displayCounter() {
-        const counterDiv = document.createElement('div');
-        counterDiv.id = 'visit-counter';
-        counterDiv.style.cssText = `
-          position: fixed;
-          bottom: 20px;
-          left: 20px;
-          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-          color: white;
-          padding: 10px 15px;
-          border-radius: 25px;
-          font-size: 12px;
-          font-weight: bold;
-          z-index: 1000;
-          box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-          display: flex;
-          align-items: center;
-          gap: 8px;
-          font-family: 'Poppins', sans-serif;
-        `;
-        counterDiv.innerHTML = `
-          <i class="bi bi-eye-fill"></i>
-          <span>Visitas: ${visitCount}</span>
-        `;
-        
-        document.body.appendChild(counterDiv);
-      }
-      
-      // Send notification to Telegram
-      function sendTelegramNotification(totalVisits) {
-        const botToken = '7964493270:AAHNi_fMDPR96E5BdDfaX8I-c_L-9gC-UV0'; // Token real del bot
-        const chatId = '5930987321055'; // Tu número de Telegram (sin @)
-        
-        const message = `🔔 Nueva visita en Pucusoft
-📊 Total de visitas: ${totalVisits}
-🌐 Página: ${window.location.href}
-🕐 Fecha: ${new Date().toLocaleString('es-EC')}
-📍 País: ${getCountryCode()}`;
-        
-        // Usamos un servicio de proxy para evitar CORS
-        const telegramUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
-        
-        // Debug: mostrar información en consola
-        console.log('🚀 Intentando enviar notificación a Telegram...');
-        console.log('🤖 Bot Token:', botToken.substring(0, 10) + '...');
-        console.log('💬 Chat ID:', chatId);
-        console.log('🌐 URL:', telegramUrl);
-        console.log('📝 Mensaje:', message);
-        
-        fetch(telegramUrl, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            chat_id: chatId,
-            text: message,
-            parse_mode: 'HTML'
-          })
-        })
-        .then(response => {
-          console.log('📡 Response status:', response.status);
-          console.log('📋 Response headers:', response.headers);
-          return response.json();
-        })
-        .then(data => {
-          console.log('✅ Respuesta de Telegram:', data);
-          if (data.ok) {
-            console.log('🎉 Notificación enviada exitosamente');
-          } else {
-            console.error('❌ Error en la respuesta de Telegram:', data);
-            console.log('🔄 Intentando método alternativo...');
-            sendAlternativeNotification(totalVisits);
-          }
-        })
-        .catch(error => {
-          console.error('❌ Error al enviar notificación:', error);
-          console.log('🔄 Intentando método alternativo...');
-          sendAlternativeNotification(totalVisits);
-        });
-      }
-      
-      // Alternative notification method
-      function sendAlternativeNotification(totalVisits) {
-        // Crear una imagen invisible que carga un webhook
-        const img = new Image();
-        img.src = `https://api.telegram.org/bot7964493270:AAHNi_fMDPR96E5BdDfaX8I-c_L-9gC-UV0/sendMessage?chat_id=5930987321055&text=${encodeURIComponent(
-          `🔔 Visita #${totalVisits} - Pucusoft\n${window.location.href}\n${new Date().toLocaleString('es-EC')}`
-        )}`;
-        img.style.display = 'none';
-        document.body.appendChild(img);
-      }
-      
-      // Get country code (simplified)
-      function getCountryCode() {
-        const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-        if (timezone.includes('Lima') || timezone.includes('Peru')) return '🇵🇪 Perú';
-        if (timezone.includes('Guayaquil') || timezone.includes('Ecuador')) return '🇪🇨 Ecuador';
-        return '🌍 Desconocido';
-      }
-      
-      // Initialize counter when DOM is loaded
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', displayCounter);
-      } else {
-        displayCounter();
-      }
-    })();
-  </script>
-
+  
 </body>
 
 </html>
