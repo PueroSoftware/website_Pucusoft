@@ -330,8 +330,20 @@
     }
     
     .soporte-price {
-      color: #667eea;
+      color: white !important;
       font-weight: bold;
+      font-size: 24px !important;
+    }
+    
+    .pricing-item .pricing-header h4 {
+      color: white !important;
+      font-size: 28px !important;
+      font-weight: bold;
+    }
+    
+    .pricing-item .pricing-header h4 sup {
+      color: white !important;
+      font-size: 16px !important;
     }
     
     @media (max-width: 768px) {
@@ -379,6 +391,7 @@
           <li><a class="nav-link scrollto" href="index.html#about">Somos</a></li>
           <li><a class="nav-link scrollto" href="index.html#services">Servicios</a></li>
           <li><a class="nav-link scrollto" href="index.html#portfolio">Portafolio</a></li>
+          <li><a class="nav-link" href="blog.html">Blog</a></li>
           <li><a class="nav-link" href="soporte-tecnico.html">Soporte Técnico</a></li>
          <!--  -->
          <!-- <li><a href="blog.html">Blog</a></li>
@@ -1265,12 +1278,6 @@
               
               <div class="pricing-info">
                 <h4>Precios:</h4>
-                <div class="currency-toggle">
-                  <select id="soporte-currency" class="form-select">
-                    <option value="PEN">Soles (S/)</option>
-                    <option value="USD">Dólares ($)</option>
-                  </select>
-                </div>
                 <div class="price-display">
                   <span class="price-main" data-pen="80" data-usd="22">S/ 80</span>
                   <span class="price-note">+ impuesto</span>
