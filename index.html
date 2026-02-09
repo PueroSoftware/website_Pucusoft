@@ -528,6 +528,17 @@
             <div class="about-img">
               <img src="assets/img/about.jpg" class="img-fluid" alt="Equipo Pucusoft - Agencia digital en Perú" loading="lazy">
             </div>
+            <!-- Imágenes empresariales adicionales -->
+            <div class="row mt-4">
+              <div class="col-6 mb-3">
+                <img src="https://images.unsplash.com/photo-1600880292203-757bbfa1f0b5?auto=format&fit=crop&w=400&q=80" 
+                     class="img-fluid rounded shadow-sm" alt="Oficina moderna Pucusoft" loading="lazy">
+              </div>
+              <div class="col-6 mb-3">
+                <img src="https://images.unsplash.com/photo-1556761175-357a819c3793?auto=format&fit=crop&w=400&q=80" 
+                     class="img-fluid rounded shadow-sm" alt="Equipo trabajando en oficina" loading="lazy">
+              </div>
+            </div>
           </div>
          <div class="col-lg-7">
             <h3 class="pt-0 pt-lg-5">'Dentro de Nuestro ADN!'. </h3>
@@ -1236,251 +1247,6 @@
       </div>
     </section><!-- End Custom Projects Section -->
     
-    <!-- ======= Soporte Técnico Section ======= -->
-    <section id="soporte-tecnico" class="pricing">
-      <div class="container" data-aos="fade-up">
-        
-        <div class="section-header">
-          <h2>Soporte Técnico Profesional</h2>
-          <p>En Pucusoft, entendemos la importancia de mantener tus equipos tecnológicos funcionando de manera óptima. Contamos con técnicos certificados con amplia experiencia en diagnóstico, mantenimiento y reparación de equipos informáticos para usuarios particulares y empresas.</p>
-          
-          <!-- Currency Selector para Soporte Técnico -->
-          <div class="currency-selector" style="margin: 20px 0;">
-            <label for="soporte-currency" style="font-weight: bold; margin-right: 10px;">Moneda:</label>
-            <select id="soporte-currency" onchange="updateSoportePrices()" style="padding: 8px 15px; border-radius: 5px; border: 1px solid #ddd; font-size: 16px;">
-              <option value="PEN">Soles (S/)</option>
-              <option value="USD">Dólares ($)</option>
-            </select>
-            <small id="soporte-exchange-rate" style="margin-left: 15px; color: #666;"></small>
-          </div>
-        </div>
-
-        <div class="row gy-4">
-
-          <!-- Mantenimiento Preventivo -->
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-box">
-              <div class="icon"><i class="bi bi-shield-check"></i></div>
-              <h3>Mantenimiento Preventivo Integral</h3>
-              <p>Anticípate a los problemas y asegura la longevidad y rendimiento óptimo de tus equipos. Nuestro mantenimiento preventivo es una inversión inteligente para evitar fallas costosas.</p>
-              
-              <h4>Este servicio incluye:</h4>
-              <ul>
-                <li><i class="bi bi-check-circle"></i> Limpieza profunda de hardware (interno y externo)</li>
-                <li><i class="bi bi-check-circle"></i> Revisión y optimización del sistema de refrigeración</li>
-                <li><i class="bi bi-check-circle"></i> Aplicación de pasta térmica de alta calidad</li>
-                <li><i class="bi bi-check-circle"></i> Diagnóstico y optimización de disco duro/SSD</li>
-                <li><i class="bi bi-check-circle"></i> Actualización de sistema operativo y drivers</li>
-                <li><i class="bi bi-check-circle"></i> Escaneo y eliminación de malware</li>
-                <li><i class="bi bi-check-circle"></i> Optimización del arranque y rendimiento</li>
-                <li><i class="bi bi-check-circle"></i> Informe detallado del estado del equipo</li>
-              </ul>
-              
-              <div class="pricing-info">
-                <h4>Precios:</h4>
-                <div class="price-display">
-                  <span class="price-main" data-pen="80" data-usd="22">S/ 80</span>
-                  <span class="price-note">+ impuesto</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Reparación Especializada -->
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-box">
-              <div class="icon"><i class="bi bi-tools"></i></div>
-              <h3>Reparación Especializada y Mantenimiento Correctivo</h3>
-              <p>Cuando tus equipos presentan fallas, nuestro equipo técnico interviene con diagnósticos precisos y soluciones efectivas, utilizando repuestos originales y garantizando cada reparación.</p>
-              
-              <h4>Cubrimos una amplia gama de problemas:</h4>
-              <ul>
-                <li><i class="bi bi-check-circle"></i> Diagnóstico avanzado de fallas de hardware y software</li>
-                <li><i class="bi bi-check-circle"></i> Reparación o reemplazo de componentes (tarjeta madre, fuente, RAM)</li>
-                <li><i class="bi bi-check-circle"></i> Solución a problemas de arranque y sobrecalentamiento</li>
-                <li><i class="bi bi-check-circle"></i> Reparación de pantallas, teclados y periféricos</li>
-                <li><i class="bi bi-check-circle"></i> Recuperación de sistemas operativos y eliminación de virus</li>
-                <li><i class="bi bi-check-circle"></i> Soluciones para problemas de conectividad y redes</li>
-                <li><i class="bi bi-check-circle"></i> Optimización post-reparación para asegurar estabilidad</li>
-              </ul>
-              
-              <div class="pricing-info">
-                <h4>Precios:</h4>
-                <div class="price-display">
-                  <span class="price-main" data-pen="50" data-usd="14">S/ 50</span>
-                  <span class="price-note">Diagnóstico inicial + impuesto</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Soluciones de Redes -->
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-box">
-              <div class="icon"><i class="bi bi-wifi"></i></div>
-              <h3>Soluciones de Redes y Conectividad</h3>
-              <p>Diseñamos, implementamos y mantenemos soluciones de red robustas y seguras para hogares y empresas, asegurando conectividad estable y de alto rendimiento.</p>
-              
-              <h4>Nuestros servicios de redes incluyen:</h4>
-              <ul>
-                <li><i class="bi bi-check-circle"></i> Diseño e implementación de redes LAN y WLAN (Wi-Fi)</li>
-                <li><i class="bi bi-check-circle"></i> Cableado estructurado certificado (Cat 5e, Cat 6, Cat 6A)</li>
-                <li><i class="bi bi-check-circle"></i> Configuración avanzada de routers y access points</li>
-                <li><i class="bi bi-check-circle"></i> Implementación de firewalls y seguridad perimetral</li>
-                <li><i class="bi bi-check-circle"></i> Optimización de cobertura Wi-Fi y eliminación de zonas muertas</li>
-                <li><i class="bi bi-check-circle"></i> Configuración de VPNs y acceso remoto seguro</li>
-                <li><i class="bi bi-check-circle"></i> Instalación y configuración de servidores y NAS</li>
-                <li><i class="bi bi-check-circle"></i> Mantenimiento y monitoreo proactivo de redes</li>
-              </ul>
-              
-              <div class="pricing-info">
-                <h4>Precios:</h4>
-                <div class="price-display">
-                  <span class="price-main" data-pen="120" data-usd="32">S/ 120</span>
-                  <span class="price-note">Configuración básica + impuesto</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Recuperación de Datos -->
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="service-box">
-              <div class="icon"><i class="bi bi-hdd-rack"></i></div>
-              <h3>Recuperación Avanzada de Datos</h3>
-              <p>¿Has perdido información valiosa? Utilizamos técnicas avanzadas y herramientas especializadas para recuperar datos de discos duros, memorias USB y otros dispositivos de almacenamiento.</p>
-              
-              <h4>Recuperamos datos en diversos escenarios:</h4>
-              <ul>
-                <li><i class="bi bi-check-circle"></i> Discos duros con fallas mecánicas o electrónicas</li>
-                <li><i class="bi bi-check-circle"></i> Archivos eliminados accidentalmente o por formateo</li>
-                <li><i class="bi bi-check-circle"></i> Particiones corruptas o sistemas de archivos dañados</li>
-                <li><i class="bi bi-check-circle"></i> Daños por virus, ransomware u otro malware</li>
-                <li><i class="bi bi-check-circle"></i> Unidades SSD que no son reconocidas o no arrancan</li>
-                <li><i class="bi bi-check-circle"></i> Dispositivos afectados por sobretensión o daños por líquidos</li>
-                <li><i class="bi bi-check-circle"></i> Diagnóstico gratuito y presupuesto sin compromiso</li>
-              </ul>
-              
-              <div class="pricing-info">
-                <h4>Precios:</h4>
-                <div class="price-display">
-                  <span class="price-main" data-pen="150" data-usd="40">S/ 150</span>
-                  <span class="price-note">Diagnóstico + impuesto</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Planes de Soporte Técnico -->
-        <div class="section-header mt-5">
-          <h2>Planes de Soporte Técnico Flexibles</h2>
-          <p>Planes adaptados a tus necesidades particulares o empresariales con atención personalizada y tiempos de respuesta garantizados.</p>
-        </div>
-
-        <div class="row gy-4">
-
-          <!-- Diagnóstico y Consulta -->
-          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="pricing-item">
-              <div class="pricing-header">
-                <h3>Diagnóstico y Consulta</h3>
-                <h4><sup>Desde</sup><span class="soporte-price" data-pen="30" data-usd="8">S/ 30</span></h4>
-              </div>
-              <ul>
-                <li><i class="bi bi-check"></i> Evaluación inicial del equipo</li>
-                <li><i class="bi bi-check"></i> Diagnóstico de fallas menores</li>
-                <li><i class="bi bi-check"></i> Limpieza de hardware</li>
-                <li><i class="bi bi-check"></i> Optimización de sistema</li>
-                <li><i class="bi bi-check"></i> Asesoría técnica básica</li>
-              </ul>
-              <div class="text-center mt-auto">
-                <a href="#contact" class="buy-btn">Consultar Ahora</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Mantenimiento Completo -->
-          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="pricing-item">
-              <div class="pricing-header">
-                <h3>Mantenimiento Completo</h3>
-                <h4><sup>Desde</sup><span class="soporte-price" data-pen="80" data-usd="22">S/ 80</span></h4>
-              </div>
-              <ul>
-                <li><i class="bi bi-check"></i> Mantenimiento preventivo integral</li>
-                <li><i class="bi bi-check"></i> Limpieza profunda de componentes</li>
-                <li><i class="bi bi-check"></i> Aplicación de pasta térmica</li>
-                <li><i class="bi bi-check"></i> Optimización avanzada del sistema</li>
-                <li><i class="bi bi-check"></i> Revisión de seguridad y malware</li>
-                <li><i class="bi bi-check"></i> Backup básico de datos (opcional)</li>
-              </ul>
-              <div class="text-center mt-auto">
-                <a href="#contact" class="buy-btn">Agendar Mantenimiento</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Soporte Empresarial -->
-          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="pricing-item">
-              <div class="pricing-header">
-                <h3>Soporte Empresarial</h3>
-                <h4><sup>Desde</sup><span class="soporte-price" data-pen="200" data-usd="54">S/ 200</span></h4>
-              </div>
-              <ul>
-                <li><i class="bi bi-check"></i> Planes mensuales o por horas</li>
-                <li><i class="bi bi-check"></i> Soporte técnico presencial y remoto</li>
-                <li><i class="bi bi-check"></i> Tiempos de respuesta prioritarios</li>
-                <li><i class="bi bi-check"></i> Mantenimiento preventivo programado</li>
-                <li><i class="bi bi-check"></i> Gestión de infraestructura de TI</li>
-                <li><i class="bi bi-check"></i> Asesoría en adquisición de tecnología</li>
-              </ul>
-              <div class="text-center mt-auto">
-                <a href="#contact" class="buy-btn">Cotizar Plan Empresarial</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Soluciones Personalizadas -->
-          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="pricing-item featured">
-              <div class="pricing-header">
-                <h3>Soluciones Personalizadas</h3>
-                <h4><sup>Consultar</sup></h4>
-              </div>
-              <ul>
-                <li><i class="bi bi-check"></i> Planes completamente personalizados</li>
-                <li><i class="bi bi-check"></i> Evaluación de necesidades específicas</li>
-                <li><i class="bi bi-check"></i> Propuesta a medida de tu empresa</li>
-                <li><i class="bi bi-check"></i> Soporte dedicado 24/7 (opcional)</li>
-                <li><i class="bi bi-check"></i> Gestión de proyectos integrales</li>
-                <li><i class="bi bi-check"></i> Capacitación técnica para tu equipo</li>
-              </ul>
-              <div class="text-center mt-auto">
-                <a href="#contact" class="buy-btn">Solicitar Propuesta</a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- CTA Section -->
-        <div class="cta-section mt-5">
-          <div class="text-center">
-            <h3>¿Tu Equipo Necesita Atención Profesional?</h3>
-            <p>No dejes que los problemas técnicos afecten tu productividad. Contáctanos hoy mismo para un diagnóstico gratuito.</p>
-            <div class="d-flex justify-content-center gap-3 mt-4">
-              <a href="#contact" class="btn-get-started scrollto">Solicitar Servicio Técnico</a>
-              <a href="tel:+51917955859" class="btn-get-started" style="background: #28a745;">Llamar Ahora</a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End Soporte Técnico Section -->
-    
     <!-- ======= GitHub Projects Section ======= -->
     <section id="github-projects" class="portfolio" style="background: #f8f9fa;">
       <div class="container" data-aos="fade-up">
@@ -1779,8 +1545,24 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-header">
-          <h2>Nuestro equipo</h2>
-          <p> En nuestros nuevos roles, nos enorgullecemos de ofrecer soluciones de diseño web que no solo son visualmente atractivas, sino también funcionales y accesibles. Trabajamos en estrecha colaboración con nuestros clientes para comprender sus objetivos y necesidades específicas, creando sitios web que destaquen entre la multitud y refuercen su presencia en línea.".</p>
+          <h2>Nuestro Equipo Profesional</h2>
+          <p>Conoce al equipo de expertos que transforma ideas en soluciones digitales innovadoras para empresas en Perú y Ecuador.</p>
+          
+          <!-- Imágenes empresariales del equipo -->
+          <div class="row mt-4 mb-4">
+            <div class="col-md-4 mb-3">
+              <img src="https://images.unsplash.com/photo-1604064291973-79b1cd2805e3?auto=format&fit=crop&w=400&q=80" 
+                   class="img-fluid rounded shadow" alt="Oficina moderna Pucusoft" loading="lazy">
+            </div>
+            <div class="col-md-4 mb-3">
+              <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=400&q=80" 
+                   class="img-fluid rounded shadow" alt="Reunión de equipo Pucusoft" loading="lazy">
+            </div>
+            <div class="col-md-4 mb-3">
+              <img src="https://images.unsplash.com/photo-1497366216548-287094e46307?auto=format&fit=crop&w=400&q=80" 
+                   class="img-fluid rounded shadow" alt="Espacio de trabajo colaborativo" loading="lazy">
+            </div>
+          </div>
         </div>
 
         <div class="row gy-5">
@@ -1843,63 +1625,6 @@
       </div>
     </section>
     <!-- End Team Section -->
-
-    <!-- ======= Recent Blog Posts Section ======= -->
-    <section id="recent-blog-posts" class="recent-blog-posts">
-
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-header">
-          <h2>Blog Pucusoft</h2>
-          <p>Tips, guías y tendencias sobre desarrollo web, e-commerce y marketing digital para empresas en Perú y Ecuador.</p>
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="post-box">
-              <div class="post-img"><img src="assets/img/blog/blog-1.jpg" class="img-fluid" alt="Tiendas Online Perú 2026"></div>
-              <div class="meta">
-                <span class="post-date">15 Enero, 2026</span>
-                <span class="post-author"> / Jose Puero</span>
-              </div>
-              <h3 class="post-title">Guía Completa: Tiendas Online en Perú 2026</h3>
-              <p>Descubre las tendencias del e-commerce peruano, las mejores pasarelas de pago como Yape y Plin, y cómo posicionar tu tienda online en el mercado digital peruano.</p>
-              <a href="#blog-tiendas-peru" class="readmore stretched-link"><span>Leer más</span><i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="400">
-            <div class="post-box">
-              <div class="post-img"><img src="assets/img/blog/blog-2.jpg" class="img-fluid" alt="Desarrollo Web a Medida"></div>
-              <div class="meta">
-                <span class="post-date">10 Enero, 2026</span>
-                <span class="post-author"> / Stephania Chehin</span>
-              </div>
-              <h3 class="post-title">Desarrollo Web a Medida: ¿Vale la Pena?</h3>
-              <p>Análisis completo sobre los beneficios del desarrollo personalizado vs plantillas para empresas en Lima y Guayaquil. ROI, casos de éxito y mejores prácticas.</p>
-              <a href="#blog-desarrollo-medida" class="readmore stretched-link"><span>Leer más</span><i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="600">
-            <div class="post-box">
-              <div class="post-img"><img src="assets/img/blog/blog-3.jpg" class="img-fluid" alt="SEO Regional Perú Ecuador"></div>
-              <div class="meta">
-                <span class="post-date">5 Enero, 2026</span>
-                <span class="post-author"> / Carlos Puero</span>
-              </div>
-              <h3 class="post-title">SEO Local: Estrategias para Perú y Ecuador</h3>
-              <p>Optimiza tu sitio web para mercados binacionales. Keywords regionales, Google My Business, y técnicas de SEO específicas para Lima y Guayaquil.</p>
-              <a href="#blog-seo-regional" class="readmore stretched-link"><span>Leer más</span><i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
