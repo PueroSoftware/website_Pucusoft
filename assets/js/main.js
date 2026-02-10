@@ -146,9 +146,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     heroCarouselItems.forEach((item, index) => {
       if (index === 0) {
-        heroCarouselIndicators.innerHTML += `<li data-bs-target="#hero" data-bs-slide-to="S./{index}" class="active"></li>`;
+        heroCarouselIndicators.innerHTML += `<li data-bs-target="#hero" data-bs-slide-to="${index}" class="active"></li>`;
       } else {
-        heroCarouselIndicators.innerHTML += `<li data-bs-target="#hero" data-bs-slide-to="S./{index}"></li>`;
+        heroCarouselIndicators.innerHTML += `<li data-bs-target="#hero" data-bs-slide-to="${index}"></li>`;
       }
     });
   }
@@ -163,10 +163,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     window.addEventListener('load', togglescrollTop);
     document.addEventListener('scroll', togglescrollTop);
-    scrollTop.addEventListener('click', window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    }));
+    scrollTop.addEventListener('click', function() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
   }
 
   /**
