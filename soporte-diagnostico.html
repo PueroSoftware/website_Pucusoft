@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Diagnóstico del Blog y Soporte Técnico - Pucusoft</title>
+  <meta name="description" content="Diagnóstico y pasos para resolver problemas de visualización del blog y página de soporte técnico de Pucusoft">
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.css" rel="stylesheet">
+  <link href="assets/css/variables.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    .container-md { max-width: 900px; }
+    pre.codeblock { background:#111; color:#eee; padding:16px; border-radius:6px; overflow:auto }
+  </style>
+</head>
+
+<body>
+
+  <header id="header" class="header fixed-top">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
+        <div class="logo-text">Pucusoft<span>.</span></div>
+      </a>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto" href="index.html">Home</a></li>
+          <li><a class="nav-link scrollto" href="index.html#services">Servicios</a></li>
+          <li><a class="nav-link" href="blog.html">Blog</a></li>
+          <li><a class="nav-link active" href="soporte-tecnico.html">Soporte Técnico</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle d-none"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="pt-5 mt-5">
+    <div class="container container-md py-5" data-aos="fade-up">
+      <article>
+        <h1>Diagnóstico del Blog y Soporte Técnico - Pucusoft</h1>
+        <p><strong>Última actualización:</strong> 10 de Febrero, 2026</p>
+
+        <h2>📋 Resumen del Problema</h2>
+        <p><strong>Estado:</strong> Blog y Soporte Técnico no se visualizan correctamente</p>
+        <p><strong>URLs afectadas:</strong></p>
+        <ul>
+          <li><a href="https://pucusoft.netlify.app/blog">https://pucusoft.netlify.app/blog</a></li>
+          <li><a href="https://pucusoft.netlify.app/soporte-tecnico">https://pucusoft.netlify.app/soporte-tecnico</a></li>
+        </ul>
+
+        <hr>
+
+        <h2>🔍 Cambios Realizados</h2>
+        <h3>1. Blog - Nueva Pestaña Independiente</h3>
+        <p><strong>Archivo creado:</strong> <code>blog.html</code></p>
+        <p>Contenido: 3 artículos completos con modales. Navegación y PayPal integrados.</p>
+
+        <h3>2. Soporte Técnico - Nueva Pestaña Independiente</h3>
+        <p><strong>Archivo creado:</strong> <code>soporte-tecnico.html</code></p>
+        <p>Contenido: secciones de servicios, precios y formularios.</p>
+
+        <hr>
+
+        <h2>🚫 Problemas de Visualización</h2>
+        <p>Posibles causas identificadas:</p>
+        <ul>
+          <li><strong>Rutas de archivos:</strong> CSS/JS/imagenes.</li>
+          <li><strong>Netlify:</strong> redirecciones, headers o build settings.</li>
+          <li><strong>Estructura de archivos:</strong> ubicación o permisos erróneos.</li>
+          <li><strong>Errores JS:</strong> bundles corruptos (ej. bootstrap.bundle.min.js).</li>
+        </ul>
+
+        <h2>🔧 Soluciones Propuestas</h2>
+        <p>Verificar rutas y reemplazar archivos corruptos. Ejemplos:</p>
+        <pre class="codeblock"><code>ls -la assets/css/main.css
+ls -la assets/js/main.js
+ls -la assets/vendor/
+        </code></pre>
+
+        <h3>netlify.toml (ejemplo de redirecciones)</h3>
+        <pre class="codeblock"><code>[[redirects]]
+  from = "/blog"
+  to = "/blog.html"
+  status = 200
+
+[[redirects]]
+  from = "/soporte-tecnico"
+  to = "/soporte-tecnico.html"
+  status = 200
+        </code></pre>
+
+        <h2>📋 Checklist de Verificación</h2>
+        <ul>
+          <li><code>blog.html</code> existe</li>
+          <li><code>soporte-tecnico.html</code> existe</li>
+          <li>CSS y JS se cargan correctamente</li>
+          <li>Formularios y conversión de moneda funcionan</li>
+        </ul>
+
+        <h2>🎯 Próximos Pasos</h2>
+        <ol>
+          <li>Reemplazar `bootstrap.bundle.min.js` corrupto por copia oficial.</li>
+          <li>Limpiar caché en Netlify y navegador.</li>
+          <li>Verificar deploy y revisar consola/network en el navegador.</li>
+        </ol>
+
+        <p>Si quieres, puedo reemplazar ahora el bundle corrupto y verificar el deploy.</p>
+
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer py-4">
+    <div class="container text-center">
+      <small>&copy; 2026 Pucusoft - Todos los derechos reservados</small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
