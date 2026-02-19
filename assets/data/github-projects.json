@@ -1,0 +1,41 @@
+[
+  {
+    "name": "Tajmeel Stefany",
+    "badge": "E-commerce",
+    "headerGradient": "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+    "repoUrl": "https://github.com/PueroSoftware/Tajmeel_Stefany_Ecommerce",
+    "previewRepo": "PueroSoftware/Tajmeel_Stefany_Ecommerce",
+    "previewAlt": "Vista previa del repositorio Tajmeel Stefany en GitHub",
+    "title": "Tienda de Jabones Artesanales",
+    "description": "E-commerce completo para tienda de jabones y velas artesanales con carrito y gestión de productos.",
+    "techStack": ["HTML", "CSS", "JavaScript", "PHP"],
+    "demoUrl": "https://puerosoftware.github.io/Tajmeel_Stefany_Ecommerce/",
+    "demoLabel": "Ver Demo"
+  },
+  {
+    "name": "Centro Médico",
+    "badge": "Python",
+    "headerGradient": "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
+    "repoUrl": "https://github.com/PueroSoftware/Centro_Medico_CTk",
+    "previewRepo": "PueroSoftware/Centro_Medico_CTk",
+    "previewAlt": "Vista previa del repositorio Centro Médico en GitHub",
+    "title": "Gestión Centro Médico",
+    "description": "Sistema completo para gestión de centros médicos con interfaz gráfica Tkinter y CRUD.",
+    "techStack": ["Python", "Tkinter", "CustomTkinter"],
+    "demoUrl": "https://github.com/PueroSoftware/Centro-Medico",
+    "demoLabel": "Ver Proyecto"
+  },
+  {
+    "name": "Pucusoft Website",
+    "badge": "Web",
+    "headerGradient": "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
+    "repoUrl": "https://github.com/PueroSoftware/website_Pucusoft",
+    "previewRepo": "PueroSoftware/website_Pucusoft",
+    "previewAlt": "Vista previa del repositorio website_Pucusoft en GitHub",
+    "title": "Sitio Web Corporativo",
+    "description": "Sitio web oficial de Pucusoft con diseño moderno y optimizado para SEO.",
+    "techStack": ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
+    "demoUrl": "https://pucusoft.netlify.app",
+    "demoLabel": "Ver Demo"
+  }
+]
