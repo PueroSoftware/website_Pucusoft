@@ -16,8 +16,6 @@ Disallow: /node_modules/
 Disallow: /package.json
 Disallow: /package-lock.json
 Disallow: /README.md
-Disallow: /sitemap.xml
-Disallow: /robots.txt
 
 # Optimizado para motores de búsqueda regionales
 User-agent: Googlebot
