@@ -1,6 +1,25 @@
+const REDIRECTS = {
+  '/blog': '/blog.html',
+  '/blog-desarrollo-medida': '/blog-desarrollo-medida.html',
+  '/blog-seo-regional': '/blog-seo-regional.html',
+  '/blog-tendencias-2026': '/blog-tendencias-2026.html',
+  '/blog-seguridad-web': '/blog-seguridad-web.html',
+  '/blog-marketing-pymes': '/blog-marketing-pymes.html',
+  '/blog-ecommerce-guia': '/blog-ecommerce-guia.html',
+  '/blog-casos-exito': '/blog-casos-exito.html',
+  '/terminos': '/terminos.html',
+  '/privacidad': '/privacidad.html'
+};
+
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
+
+    const redirect = REDIRECTS[url.pathname];
+    if (redirect) {
+      url.pathname = redirect;
+      return env.ASSETS.fetch(new Request(url, request));
+    }
 
     if (url.pathname === '/api/contact' && request.method === 'POST') {
       try {
