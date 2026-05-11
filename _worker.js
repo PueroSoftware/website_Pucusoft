@@ -17,8 +17,10 @@ export default {
 
     const redirect = REDIRECTS[url.pathname];
     if (redirect) {
-      url.pathname = redirect;
-      return env.ASSETS.fetch(new Request(url, request));
+      return new Response(null, {
+        status: 302,
+        headers: { 'location': redirect }
+      });
     }
 
     if (url.pathname === '/api/contact' && request.method === 'POST') {
