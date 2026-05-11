@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QQXMSNRMDW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-QQXMSNRMDW');
+  </script>
+
+  <title>Seguridad Web: Protege tu Negocio en 2026 | Blog Pucusoft</title>
+  <meta content="Guía completa de seguridad web para empresas en Perú y Ecuador. HTTPS, SSL, protección contra ataques, buenas prácticas y cómo elegir un hosting seguro." name="description">
+  <meta content="seguridad web, SSL, HTTPS, protección sitios web, ciberseguridad empresas, hosting seguro, Pucusoft" name="keywords">
+
+  <meta property="og:title" content="Seguridad Web: Protege tu Negocio en 2026 | Blog Pucusoft">
+  <meta property="og:description" content="Guía completa de seguridad web para empresas en Perú y Ecuador.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=1200&q=80">
+  <meta property="og:url" content="https://pucusoft.com/blog-seguridad-web.html">
+  <meta property="og:type" content="article">
+  <meta property="article:author" content="Stephania Chehin">
+  <meta property="article:published_time" content="2026-05-11T10:00:00-05:00">
+  <meta property="article:section" content="Seguridad">
+  <meta property="article:tag" content="Seguridad Web">
+  <meta property="article:tag" content="Ciberseguridad">
+  <meta property="article:tag" content="SSL">
+
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/css/variables.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    .article-hero {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      color: white;
+      padding: 120px 0 50px;
+    }
+    .article-content { font-size: 1.1rem; line-height: 1.8; color: #333; }
+    .article-content h2 { color: #2563eb; margin-top: 2.5rem; margin-bottom: 1.5rem; font-weight: 600; }
+    .article-content h3 { color: #0f172a; margin-top: 2rem; margin-bottom: 1rem; font-weight: 600; }
+    .article-content ul, .article-content ol { margin-bottom: 1.5rem; }
+    .article-content li { margin-bottom: 0.5rem; }
+    .article-content blockquote {
+      background: #f8f9fa;
+      border-left: 4px solid #f97316;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      font-style: italic;
+    }
+    .article-meta { display: flex; gap: 20px; margin-bottom: 2rem; color: #94a3b8; font-size: 14px; flex-wrap: wrap; }
+    .article-meta span { display: flex; align-items: center; gap: 5px; }
+    .article-tags { display: flex; gap: 10px; flex-wrap: wrap; margin: 2rem 0; }
+    .tag { background: #e0e7ff; color: #2563eb; padding: 5px 12px; border-radius: 20px; font-size: 12px; }
+    .tag:hover { background: #2563eb; color: white; }
+    .author-box { background: #f8f9fa; border-radius: 15px; padding: 30px; margin: 3rem 0; display: flex; gap: 20px; align-items: center; }
+    .author-image { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; }
+    .cta-box { background: linear-gradient(135deg, #2563eb, #1d4ed8); color: white; border-radius: 15px; padding: 40px; text-align: center; margin: 3rem 0; }
+    .cta-box .btn-light { color: #2563eb; font-weight: 600; }
+    .table-of-contents { background: #f8f9fa; border-radius: 15px; padding: 30px; margin: 2rem 0; }
+    .table-of-contents h3 { margin-bottom: 1rem; color: #2563eb; }
+    .table-of-contents ul { list-style: none; padding: 0; }
+    .table-of-contents li { margin-bottom: 0.5rem; }
+    .table-of-contents a { color: #475569; text-decoration: none; }
+    .table-of-contents a:hover { color: #2563eb; }
+    .highlight-box { background: #e0e7ff; border-radius: 10px; padding: 20px; margin: 1.5rem 0; }
+    .highlight-box h4 { color: #2563eb; }
+    .navbar a, .navbar a:focus { color: #cbd5e1 !important; }
+    .navbar a:hover, .navbar .active { color: #f97316 !important; }
+    .header.sticked .navbar a, .header.sticked .navbar a:focus { color: #475569 !important; }
+    .header.sticked .navbar a:hover, .header.sticked .navbar .active { color: #2563eb !important; }
+    .logo-text { color: #fff !important; }
+    .header.sticked .logo-text { color: var(--color-secondary) !important; }
+    .logo-text span { color: #f97316 !important; }
+    @media (max-width: 768px) {
+      .article-hero { padding: 100px 0 30px; }
+      .author-box { flex-direction: column; text-align: center; }
+      .article-meta { flex-direction: column; gap: 10px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header id="header" class="header fixed-top">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
+        <div class="logo-text">Pucusoft<span>.</span></div>
+      </a>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto" href="index.html#soluciones">Soluciones</a></li>
+          <li><a class="nav-link scrollto" href="index.html#portafolio">Portafolio</a></li>
+          <li><a class="nav-link scrollto" href="index.html#precios">Precios</a></li>
+          <li><a class="nav-link scrollto" href="index.html#contacto">Contacto</a></li>
+          <li><a class="nav-link active" href="blog.html">Blog</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle d-none"></i>
+      </nav>
+    </div>
+  </header>
+
+  <section class="article-hero">
+    <div class="container" data-aos="zoom-out">
+      <div class="text-center">
+        <h1 class="mb-4">Seguridad Web: Protege tu Negocio en 2026</h1>
+        <p class="lead mb-4">Guía esencial de ciberseguridad para empresas en Guayaquil y Lima</p>
+        <div class="article-meta justify-content-center">
+          <span><i class="bi bi-calendar3"></i> 11 Mayo, 2026</span>
+          <span><i class="bi bi-person"></i> Stephania Chehin</span>
+          <span><i class="bi bi-clock"></i> 7 min lectura</span>
+          <span><i class="bi bi-folder"></i> Seguridad</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main id="main">
+    <div class="container" data-aos="fade-up">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+
+          <div class="table-of-contents" data-aos="fade-up">
+            <h3><i class="bi bi-list-ul me-2"></i>Índice</h3>
+            <ul>
+              <li><a href="#introduccion">1. Introducción</a></li>
+              <li><a href="#ssl-https">2. SSL y HTTPS: La Base de la Seguridad</a></li>
+              <li><a href="#amenazas">3. Amenazas Comunes en Sitios Web</a></li>
+              <li><a href="#backend">4. Seguridad en el Backend</a></li>
+              <li><a href="#hosting">5. Cómo Elegir un Hosting Seguro</a></li>
+              <li><a href="#practicas">6. Buenas Prácticas para tu Empresa</a></li>
+              <li><a href="#conclusiones">7. Conclusiones</a></li>
+            </ul>
+          </div>
+
+          <article class="article-content" data-aos="fade-up" data-aos-delay="200">
+
+            <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=1200&q=80" class="img-fluid rounded" alt="Seguridad web para empresas" loading="lazy">
+
+            <section id="introduccion">
+              <h2>Introducción</h2>
+              <p>En 2025, los ataques cibernéticos a pequeñas y medianas empresas en Latinoamérica aumentaron un 40%. Ecuador y Perú no fueron la excepción: ransomware, phishing y filtraciones de datos afectaron a negocios de todos los tamaños.</p>
+              <p>La buena noticia es que la mayoría de estos ataques se pueden prevenir con medidas básicas de seguridad que no requieren grandes inversiones. En esta guía te mostramos cómo proteger tu sitio web y la información de tus clientes.</p>
+            </section>
+
+            <section id="ssl-https">
+              <h2>SSL y HTTPS: La Base de la Seguridad</h2>
+              <p>El certificado SSL (Secure Sockets Layer) es el mínimo indispensable para cualquier sitio web. Encripta la comunicación entre el navegador del usuario y tu servidor, protegiendo datos sensibles como contraseñas, números de tarjeta e información personal.</p>
+
+              <div class="highlight-box">
+                <h4><i class="bi bi-shield-check me-2"></i>Datos clave</h4>
+                <ul class="mb-0">
+                  <li>Google Chrome marca como "No seguro" cualquier sitio sin HTTPS desde 2018.</li>
+                  <li>El 85% de los usuarios abandonan un sitio si ven la advertencia de seguridad.</li>
+                  <li>HTTPS es un factor de ranking confirmado para Google.</li>
+                  <li>Hoy puedes obtener SSL gratuito con Let's Encrypt o Cloudflare.</li>
+                </ul>
+              </div>
+
+              <p>Todos los proyectos que desarrollamos en Pucusoft incluyen SSL gratuito configurado desde el día uno. No hay excusa para tener un sitio sin HTTPS en 2026.</p>
+            </section>
+
+            <section id="amenazas">
+              <h2>Amenazas Comunes en Sitios Web</h2>
+
+              <h3>Inyección SQL</h3>
+              <p>Ocurre cuando un atacante inserta código SQL malicioso en los campos de tu sitio (formularios, login, búsqueda). Una inyección SQL bien ejecutada puede exponer toda tu base de datos.</p>
+              <p><strong>Cómo prevenirlo:</strong> Usa consultas parametrizadas (prepared statements) y ORMs como Prisma o TypeORM. Nunca concatenes strings directamente en tus consultas SQL.</p>
+
+              <h3>Cross-Site Scripting (XSS)</h3>
+              <p>El atacante inyecta scripts maliciosos en tu sitio web que se ejecutan en el navegador de tus visitantes. Puede robar cookies, credenciales o redirigir a sitios falsos.</p>
+              <p><strong>Cómo prevenirlo:</strong> Escapa todo el input del usuario, usa Content Security Policy (CSP) headers y sanitiza el HTML que renderizas.</p>
+
+              <h3>Fuerza Bruta y Ataques de Login</h3>
+              <p>Los bots intentan miles de combinaciones de usuario/contraseña hasta encontrar una válida.</p>
+              <p><strong>Cómo prevenirlo:</strong> Implementa rate limiting, autenticación de dos factores (2FA) y usa CAPTCHA en los formularios de login.</p>
+
+              <blockquote>
+                "El 76% de los ataques a PYMES en Latinoamérica podrían evitarse con medidas básicas de seguridad: SSL, actualizaciones y contraseñas fuertes." — Reporte de Ciberseguridad LATAM 2025
+              </blockquote>
+            </section>
+
+            <section id="backend">
+              <h2>Seguridad en el Backend</h2>
+              <p>Si tu sitio web tiene un backend (base de datos, API, panel de administración), estas medidas son obligatorias:</p>
+              <ul>
+                <li><strong>Autenticación segura:</strong> Usa JWT con expiry corto, refresh tokens y almacena contraseñas con bcrypt o Argon2.</li>
+                <li><strong>CORS bien configurado:</strong> No dejes tu API abierta a cualquier origen. Especifica solo los dominios que necesitan acceso.</li>
+                <li><strong>Rate limiting:</strong> Limita las peticiones por IP para evitar ataques de denegación de servicio (DDoS).</li>
+                <li><strong>Logs y monitoreo:</strong> Implementa herramientas como Sentry o LogRocket para detectar actividad sospechosa en tiempo real.</li>
+                <li><strong>Backups automáticos:</strong> Programa backups diarios de tu base de datos y almacénalos en un lugar separado de tu servidor principal.</li>
+              </ul>
+            </section>
+
+            <section id="hosting">
+              <h2>Cómo Elegir un Hosting Seguro</h2>
+              <p>No todos los hosting son iguales en seguridad. Esto es lo que debes buscar:</p>
+              <ul>
+                <li><strong>SSL gratuito incluido</strong> (Let's Encrypt o similar).</li>
+                <li><strong>Firewall de aplicaciones web (WAF)</strong> que bloquea tráfico malicioso antes de que llegue a tu sitio.</li>
+                <li><strong>Protección DDoS</strong> integrada.</li>
+                <li><strong>Backups automáticos</strong> con restauración en un clic.</li>
+                <li><strong>Actualizaciones automáticas</strong> de software del servidor.</li>
+                <li><strong>Soporte 24/7</strong> con equipo de seguridad.</li>
+              </ul>
+              <p>En Pucusoft recomendamos Cloudflare Pages para sitios estáticos (rápido, seguro, CDN global) y VPS o alojamiento administrado para aplicaciones con backend. Cada proyecto incluye configuración de seguridad desde el inicio.</p>
+            </section>
+
+            <section id="practicas">
+              <h2>Buenas Prácticas para tu Empresa</h2>
+              <ol>
+                <li><strong>Mantén todo actualizado:</strong> CMS, plugins, librerías y servidor. Las vulnerabilidades conocidas son la puerta de entrada más común.</li>
+                <li><strong>Usa contraseñas únicas y fuertes:</strong> Un gestor de contraseñas como Bitwarden es inversión mínima para tu equipo.</li>
+                <li><strong>Capacita a tu equipo:</strong> El error humano es la principal causa de filtraciones. Enséñales a identificar phishing y a manejar datos sensibles.</li>
+                <li><strong>Define políticas de acceso:</strong> No todos necesitan acceso al servidor, la base de datos o el panel de administración. Mínimo privilegio necesario.</li>
+                <li><strong>Audita regularmente:</strong> Revisa logs, usuarios activos y permisos al menos una vez al mes.</li>
+              </ol>
+            </section>
+
+            <section id="conclusiones">
+              <h2>Conclusiones</h2>
+              <p>La seguridad web no es un lujo ni una característica opcional. Es un requisito fundamental para cualquier negocio que opere online, especialmente en mercados como Ecuador y Perú donde la confianza digital está en construcción.</p>
+              <p>Invertir en seguridad desde el inicio de tu proyecto es mucho más barato que enfrentar las consecuencias de un ataque: pérdida de datos, clientes, reputación y dinero.</p>
+
+              <blockquote>
+                "La seguridad no es un producto, es un proceso. No se trata de ser 100% seguro, sino de ser más seguro que el promedio."
+              </blockquote>
+            </section>
+
+            <div class="article-tags">
+              <span class="tag">Seguridad Web</span>
+              <span class="tag">SSL</span>
+              <span class="tag">Ciberseguridad</span>
+              <span class="tag">Hosting</span>
+              <span class="tag">Ecuador</span>
+              <span class="tag">Perú</span>
+            </div>
+
+          </article>
+
+          <div class="author-box" data-aos="fade-up">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80" class="author-image" alt="Stephania Chehin" loading="lazy">
+            <div>
+              <h4>Stephania Chehin</h4>
+              <p class="text-muted mb-2">Content Manager & Estratega Digital en Pucusoft</p>
+              <p> Especialista en marketing digital, SEO y contenido estratégico para empresas tecnológicas en Ecuador. Ayudamos a Pucusoft a comunicar soluciones complejas de forma clara y efectiva.</p>
+            </div>
+          </div>
+
+          <div class="cta-box" data-aos="fade-up">
+            <h3 class="mb-3">¿Tu sitio web está protegido?</h3>
+            <p class="mb-4">Te ayudamos a auditar la seguridad de tu sitio web y corregir vulnerabilidades. Consultoría gratuita.</p>
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+              <a href="index.html#contacto" class="btn btn-light btn-lg">Solicitar Auditoría</a>
+              <a href="https://wa.me/5930987321055" class="btn btn-outline-light btn-lg">WhatsApp</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer id="footer" class="footer">
+    <div class="footer-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3>Pucusoft</h3>
+              <p>
+                Guayaquil, Ecuador<br>
+                Lima, Perú<br><br>
+                <strong>WhatsApp:</strong> +593 0987321055<br>
+                <strong>Email:</strong> <a href="mailto:josephpuero@aol.com" style="color: inherit;">josephpuero@aol.com</a>
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Enlaces</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="index.html#soluciones">Soluciones</a></li>
+              <li><a href="index.html#portafolio">Portafolio</a></li>
+              <li><a href="blog.html">Blog</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Contacto</h4>
+            <ul>
+              <li><a href="https://wa.me/5930987321055">WhatsApp Ecuador</a></li>
+              <li><a href="https://wa.me/51917955859">WhatsApp Perú</a></li>
+              <li><a href="mailto:josephpuero@aol.com">Email</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Síguenos</h4>
+            <div class="social-links">
+              <a href="https://www.facebook.com/puerocuerosoft"><i class="bi bi-facebook"></i></a>
+              <a href="https://www.instagram.com/pucusoftpuero"><i class="bi bi-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/puerojose"><i class="bi bi-linkedin"></i></a>
+              <a href="https://twitter.com/joseph_puero"><i class="bi bi-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-legal text-center">
+      <div class="container">
+        <p>&copy; 2026 Pucusoft — Todos los derechos reservados</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="preloader"></div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
