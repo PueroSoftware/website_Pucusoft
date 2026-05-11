@@ -1,4 +1,4 @@
-# Netlify configuration for redirects and basic security headers
+# Netlify configuration
 [build]
   publish = "."
 
@@ -8,8 +8,23 @@
   status = 200
 
 [[redirects]]
-  from = "/soporte-tecnico"
-  to = "/soporte-tecnico.html"
+  from = "/blog-desarrollo-medida"
+  to = "/blog-desarrollo-medida.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog-seo-regional"
+  to = "/blog-seo-regional.html"
+  status = 200
+
+[[redirects]]
+  from = "/terminos"
+  to = "/terminos.html"
+  status = 200
+
+[[redirects]]
+  from = "/privacidad"
+  to = "/privacidad.html"
   status = 200
 
 [[headers]]
@@ -19,3 +34,4 @@
     X-XSS-Protection = "1; mode=block"
     Referrer-Policy = "no-referrer-when-downgrade"
     X-Content-Type-Options = "nosniff"
+    Permissions-Policy = "geolocation=(self), microphone=(), camera=()"

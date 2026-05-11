@@ -26,6 +26,32 @@
     "demoLabel": "Ver Proyecto"
   },
   {
+    "name": "Apk-Gct",
+    "badge": "Kotlin",
+    "headerGradient": "linear-gradient(135deg, #f97316, #ea580c)",
+    "repoUrl": "https://github.com/PueroSoftware/Apk-Gct",
+    "previewRepo": "PueroSoftware/Apk-Gct",
+    "previewAlt": "Vista previa del repositorio Apk-Gct en GitHub",
+    "title": "App Android Kotlin",
+    "description": "Aplicación nativa Android desarrollada en Kotlin. Proyecto demo con arquitectura moderna para dispositivos móviles.",
+    "techStack": ["Kotlin", "Android", "XML"],
+    "demoUrl": "https://github.com/PueroSoftware/Apk-Gct",
+    "demoLabel": "Ver Proyecto"
+  },
+  {
+    "name": "EmprendeISTG",
+    "badge": "React Native",
+    "headerGradient": "linear-gradient(135deg, #2563eb, #1d4ed8)",
+    "repoUrl": "https://github.com/PueroSoftware/EmprendeIstg-RN",
+    "previewRepo": "PueroSoftware/EmprendeIstg-RN",
+    "previewAlt": "Vista previa del repositorio EmprendeIstg-RN en GitHub",
+    "title": "App Emprende ISTG",
+    "description": "Proyecto de investigación del Instituto Superior Tecnológico Guayaquil. App multiplataforma migrada de Kotlin a React Native con Expo.",
+    "techStack": ["React Native", "Expo", "Kotlin", "JavaScript"],
+    "demoUrl": "https://github.com/PueroSoftware/EmprendeIstg-RN",
+    "demoLabel": "Ver Proyecto"
+  },
+  {
     "name": "Pucusoft Website",
     "badge": "Web",
     "headerGradient": "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",

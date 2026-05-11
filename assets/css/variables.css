@@ -33,17 +33,26 @@
   --color-default-rgb: 26, 31, 36;
 
   /* Defult links color */
-  --color-links: #0ea2bd;
-  --color-links-hover: #1ec3e0;
+  --color-links: #2563eb;
+  --color-links-hover: #1d4ed8;
 
-  /* Primay colors */
-  --color-primary: #0ea2bd;
-  --color-primary-light: #1ec3e0;
-  --color-primary-dark: #0189a1;
+  /* Primay colors - Azul (Confianza/Autoridad) */
+  --color-primary: #2563eb;
+  --color-primary-light: #3b82f6;
+  --color-primary-dark: #1d4ed8;
 
-  --color-primary-rgb: 14, 162, 189;
-  --color-primary-light-rgb: 30, 195, 224;
-  --color-primary-dark-rgb: 1, 137, 161;
+  --color-primary-rgb: 37, 99, 235;
+  --color-primary-light-rgb: 59, 130, 246;
+  --color-primary-dark-rgb: 29, 78, 216;
+
+  /* Accent color - Naranja (Acción/Energía) */
+  --color-accent: #f97316;
+  --color-accent-light: #fb923c;
+  --color-accent-dark: #ea580c;
+
+  --color-accent-rgb: 249, 115, 22;
+  --color-accent-light-rgb: 251, 146, 60;
+  --color-accent-dark-rgb: 234, 88, 12;
 
   /* Secondary colors */
   --color-secondary: #485664;
