@@ -15,10 +15,11 @@ export default {
   async fetch(request, env) {
     const url = new URL(request.url);
 
-    const redirect = REDIRECTS[url.pathname];
-    if (redirect) {
-      url.pathname = redirect;
-      return env.ASSETS.fetch(new Request(url, request));
+    const target = REDIRECTS[url.pathname];
+    if (target) {
+      const newUrl = new URL(target, url.origin);
+      const response = await env.ASSETS.fetch(new Request(newUrl, request));
+      return new Response(response.body, response);
     }
 
     if (url.pathname === '/api/contact' && request.method === 'POST') {
