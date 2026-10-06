@@ -39,12 +39,7 @@
     }
   }
 
-  // Verificar si el widget ya está injectado (idempotente)
-  if (document.getElementById('faq-whatsapp-widget')) {
-    return;
-  }
-
-  // Plantilla HTML del widget usando EXCLUSIVAMENTE clases Bootstrap 5.3
+  // Widget HTML usando EXCLUSIVAMENTE clases Bootstrap 5.3
   const faqWidgetHTML = `
     <!-- Widget Preguntas Frecuentes Flotante a la Izquierda -->
     <div id="faq-whatsapp-widget" class="faq-widget position-fixed bottom-0 start-0 m-4 z-index-1050 min-w-80 max-w-sm w-full sm:w-64 md:w-80 rounded-xl border border-slate-200 shadow-sm shadow-slate-500/10 transition-all duration-300 ease-out opacity-100 transform translate-y-full" aria-hidden="true" aria-label="Preguntas frecuentes" role="dialog">
@@ -114,39 +109,45 @@
     </div>
   `;
 
-  // Inyectar el widget en el DOM
-  const widgetEl = document.createElement('div');
-  widgetEl.innerHTML = faqWidgetHTML.trim();
-  const widgetContainer = widgetEl.firstElementChild;
-  
-  // Añadir al body (al inicio para que aparezca con alto z-index)
-  document.body.insertBefore(widgetContainer, document.body.firstChild);
-
-  // Inicializar Bootstrap accordion (Bootstrap 5.3 ya está cargado en el sitio)
-  const accordionEl = document.getElementById('faqAccordion');
-  if (accordionEl && typeof bootstrap !== 'undefined') {
-    new bootstrap.Accordion(accordionEl);
-  }
-
-  // Configurar cierre del widget + WhatsApp automático al cerrar
-  const widget = document.getElementById('faq-whatsapp-widget');
-  if (!widget) return;
-
-  // Botón de cerrar (X)
-  const closeBtn = widget.querySelector('#closeFaq');
-  if (closeBtn) {
-    closeBtn.addEventListener('click', function() {
-      // Animación de salida usando clases Bootstrap
-      widget.classList.remove('opacity-100', 'translate-y-full');
-      widget.classList.add('opacity-0', 'translate-y-full');
-      
-      // Pequeño delay para asegurar que cierre antes de abrir WhatsApp
-      setTimeout(function() {
-        const paisInfo = detectarPais();
-        if (paisInfo) {
-          abrirWhatsApp(paisInfo);
-        }
-      }, 300);
-    });
-  }
+  // Cuando el DOM esté listo, injectar el widget y configurar interacciones
+  document.addEventListener('DOMContentLoaded', function() {
+    // Verificar si el widget ya existe (idempotente)
+    if (document.getElementById('faq-whatsapp-widget')) {
+      return;
+    }
+    
+    // Inyectar el widget al body
+    const widgetEl = document.createElement('div');
+    widgetEl.innerHTML = faqWidgetHTML.trim();
+    const widgetContainer = widgetEl.firstElementChild;
+    document.body.insertBefore(widgetContainer, document.body.firstChild);
+    
+    // Inicializar Bootstrap accordion (Bootstrap 5.3 ya está cargado)
+    const accordionEl = document.getElementById('faqAccordion');
+    if (accordionEl && typeof bootstrap !== 'undefined') {
+      new bootstrap.Accordion(accordionEl);
+    }
+    
+    // Configurar cierre del widget + WhatsApp automático al cerrar
+    const widget = document.getElementById('faq-whatsapp-widget');
+    if (!widget) return;
+    
+    // Botón de cerrar (X)
+    const closeBtn = widget.querySelector('#closeFaq');
+    if (closeBtn) {
+      closeBtn.addEventListener('click', function() {
+        // Animación de salida usando clases Bootstrap
+        widget.classList.remove('opacity-100', 'translate-y-full');
+        widget.classList.add('opacity-0', 'translate-y-full');
+        
+        // Pequeño delay para asegurar que cierre antes de abrir WhatsApp
+        setTimeout(function() {
+          const paisInfo = detectarPais();
+          if (paisInfo) {
+            abrirWhatsApp(paisInfo);
+          }
+        }, 300);
+      });
+    }
+  });
 })();
