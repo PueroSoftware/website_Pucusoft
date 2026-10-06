@@ -1385,32 +1385,46 @@
     </button>
   </div>
   <div class="faq-widget-content">
-    <div class="faq-accordion">
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
-          <i class="bi bi-check-circle"></i> ¿Incluye dominio .com?
-        </button>
-        <div class="faq-answer">
-          Sí, dominio .com pagado por 3 años en todos los paquetes.
+    <!-- Acordeón Bootstrap -->
+    <div class="accordion" id="faqAccordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="accordion" data-bs-target="#faqOne" aria-expanded="false" aria-controls="faqOne">
+            <i class="bi bi-check-circle"></i> ¿Incluye dominio .com?
+          </button>
+        </h2>
+        <div id="faqOne" class="accordion-collapse collapsed">
+          <div class="accordion-body">
+            Sí, dominio .com pagado por 3 años en todos los paquetes.
+          </div>
         </div>
       </div>
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
-          <i class="bi bi-check-circle"></i> ¿Precios en dólares o soles?
-        </button>
-        <div class="faq-answer">
-          Los precios base son en USD ($240, $400, $750). Puedes cambiar a Soles (S/) con el selector de moneda arriba a la derecha.
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="accordion" data-bs-target="#faqTwo" aria-expanded="false" aria-controls="faqTwo">
+            <i class="bi bi-check-circle"></i> ¿Precios en dólares o soles?
+          </button>
+        </h2>
+        <div id="faqTwo" class="accordion-collapse collapsed">
+          <div class="accordion-body">
+            Los precios base son en USD ($240, $400, $750). Puedes cambiar a Soles (S/) con el selector de moneda arriba a la derecha.
+          </div>
         </div>
       </div>
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
-          <i class="bi bi-check-circle"></i> ¿Entrega la auditoría en cuánto tiempo?
-        </button>
-        <div class="faq-answer">
-          El diagnóstico Express o Avanzado tiene entrega en 3 a 5 días hábiles.
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="accordion" data-bs-target="#faqThree" aria-expanded="false" aria-controls="faqThree">
+            <i class="bi bi-check-circle"></i> ¿Entrega la auditoría en cuánto tiempo?
+          </button>
+        </h2>
+        <div id="faqThree" class="accordion-collapse collapsed">
+          <div class="accordion-body">
+            El diagnóstico Express o Avanzado tiene entrega en 3 a 5 días hábiles.
+          </div>
         </div>
       </div>
     </div>
+    <!-- Fin acordeón Bootstrap -->
   </div>
   <div class="faq-widget-footer">
     <a href="#contacto" class="whatsapp-faq-btn" target="_blank">
