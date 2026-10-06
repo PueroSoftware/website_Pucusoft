@@ -33,6 +33,7 @@ El widget de Preguntas Frecuentes está en la esquina inferior izquierda y prese
   - ¿Incluye dominio .com?
   - ¿Precios en dólares o soles?
   - ¿Entrega la auditoría en cuánto tiempo?
+- **Burbuja flotante**: el widget inicia minimizado y muestra el panel al pulsar el botón FAQ.
 - **Cierre inteligente**: Al hacer clic en el botón "X", el widget se oculta y se abre automáticamente WhatsApp según la moneda seleccionada:
   - **PEN (Soles)** → +593 0987321055 (Ecuador)
   - **USD (Dólares)** → +51 917 955 859 (Perú)

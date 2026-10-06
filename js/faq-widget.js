@@ -29,18 +29,29 @@
   }
 
   function inicializarWidget(widget) {
+    const shell = widget.closest('.faq-widget-shell');
+    const openBtn = shell && shell.querySelector('#openFaq');
     const accordionEl = widget.querySelector('#faqAccordion');
     if (accordionEl && typeof bootstrap !== 'undefined') {
       bootstrap.Accordion.getOrCreateInstance(accordionEl);
     }
 
     const closeBtn = widget.querySelector('#closeFaq');
-    if (!closeBtn) {
-      console.error('El widget FAQ no contiene el botón de cierre.');
+    if (!shell || !openBtn || !closeBtn) {
+      console.error('El widget FAQ no contiene sus controles de apertura y cierre.');
       return;
     }
 
+    openBtn.addEventListener('click', function () {
+      shell.classList.add('is-open');
+      openBtn.setAttribute('aria-expanded', 'true');
+      widget.classList.remove('is-hidden');
+      widget.setAttribute('aria-hidden', 'false');
+    });
+
     closeBtn.addEventListener('click', function () {
+      shell.classList.remove('is-open');
+      openBtn.setAttribute('aria-expanded', 'false');
       widget.classList.add('is-hidden');
       widget.setAttribute('aria-hidden', 'true');
 
