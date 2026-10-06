@@ -797,8 +797,8 @@
   <!-- Currency Converter Script -->
   <script>
     const exchangeRates = {
-      PEN: 1,
-      USD: 0.27
+      PEN: 3.7,
+      USD: 1
     };
 
     const basePrices = {
@@ -814,7 +814,7 @@
 
       const exchangeRateEl = document.getElementById('exchange-rate');
       if (currency === 'USD') {
-        exchangeRateEl.textContent = 'Tipo de cambio: 1 S/ = ' + exchangeRates.USD + ' $ (aproximado)';
+        exchangeRateEl.textContent = 'Tipo de cambio: 1 $ = ' + exchangeRates.PEN + ' S/ (aproximado)';
       } else {
         exchangeRateEl.textContent = '';
       }
