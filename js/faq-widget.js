@@ -1,100 +1,83 @@
 // FAQ Widget Flotante - Pucusoft
-// Módulo de interacciones - se carga con <script src="js/faq-widget.js" defer>
-// El HTML del widget ya está embedido en index.html
 
-(function() {
+(function () {
   'use strict';
-  
-  // Configuración de WhatsApp por país (según moneda seleccionada)
+
   const countryWhatsApp = {
-    'PEN': { // Soles = Ecuador
-      phone: '5930987321055',
-      name: 'Ecuador'
-    },
-    'USD': { // Dólares = Perú
-      phone: '51917955859',
-      name: 'Perú'
-    }
+    PEN: { phone: '5930987321055' },
+    USD: { phone: '51917955859' }
   };
 
-  // Función para detectar país basado en el selector de moneda activo
   function detectarPais() {
     const currencySelect = document.getElementById('currency');
-    if (currencySelect) {
-      const selectedValue = currencySelect.value;
-      return countryWhatsApp[selectedValue];
+    if (currencySelect && countryWhatsApp[currencySelect.value]) {
+      return countryWhatsApp[currencySelect.value];
     }
-    // Fallback: detectar por idioma del navegador
-    const lang = navigator.language.substring(0, 2);
-    if (lang === 'es') {
-      return countryWhatsApp['PEN'];
-    }
-    return null;
+
+    return navigator.language.substring(0, 2) === 'es'
+      ? countryWhatsApp.PEN
+      : null;
   }
 
-  // Función para abrir WhatsApp con número detectado
   function abrirWhatsApp(paisInfo) {
-    if (paisInfo) {
-      const whatsappUrl = `https://wa.me/${paisInfo.phone}?text=Hola%20Pucusoft,%20quiero%20consultar%20por%20un%20proyecto`;
-      window.open(whatsappUrl, '_blank');
+    if (!paisInfo) {
+      return;
+    }
+
+    const message = encodeURIComponent('Hola Pucusoft, quiero consultar por un proyecto');
+    window.open(`https://wa.me/${paisInfo.phone}?text=${message}`, '_blank', 'noopener,noreferrer');
+  }
+
+  function inicializarWidget(widget) {
+    const accordionEl = widget.querySelector('#faqAccordion');
+    if (accordionEl && typeof bootstrap !== 'undefined') {
+      bootstrap.Accordion.getOrCreateInstance(accordionEl);
+    }
+
+    const closeBtn = widget.querySelector('#closeFaq');
+    if (!closeBtn) {
+      console.error('El widget FAQ no contiene el botón de cierre.');
+      return;
+    }
+
+    closeBtn.addEventListener('click', function () {
+      widget.classList.add('is-hidden');
+      widget.setAttribute('aria-hidden', 'true');
+
+      window.setTimeout(function () {
+        abrirWhatsApp(detectarPais());
+      }, 300);
+    });
+  }
+
+  async function cargarWidget() {
+    const container = document.getElementById('faq-widget-container');
+    if (!container) {
+      console.error('No se encontró el contenedor del widget FAQ.');
+      return;
+    }
+
+    try {
+      const response = await fetch('faq-widget.html');
+      if (!response.ok) {
+        throw new Error(`No se pudo cargar faq-widget.html (${response.status}).`);
+      }
+
+      container.innerHTML = await response.text();
+      const widget = container.querySelector('#faq-whatsapp-widget');
+      if (!widget) {
+        throw new Error('faq-widget.html no contiene #faq-whatsapp-widget.');
+      }
+
+      inicializarWidget(widget);
+    } catch (error) {
+      console.error('Error al cargar el widget FAQ:', error);
     }
   }
 
-  // Inicializar accordion Bootstrap cuando el DOM esté listo
-  document.addEventListener('DOMContentLoaded', function() {
-    const accordionEl = document.getElementById('faqAccordion');
-    if (accordionEl && typeof bootstrap !== 'undefined') {
-      new bootstrap.Accordion(accordionEl);
-    }
-    
-    // Configurar cierre del widget + WhatsApp automático al cerrar
-    const widget = document.getElementById('faq-whatsapp-widget');
-    if (!widget) return;
-    
-    // Botón de cerrar (X)
-    const closeBtn = widget.querySelector('#closeFaq');
-    if (closeBtn) {
-      closeBtn.addEventListener('click', function() {
-        // Animación de salida
-        widget.classList.remove('opacity-100', 'translate-y-full');
-        widget.classList.add('opacity-0', 'translate-y-full');
-        
-        // Pequeño delay para asegurar que cierre antes de abrir WhatsApp
-        setTimeout(function() {
-          const paisInfo = detectarPais();
-          if (paisInfo) {
-            abrirWhatsApp(paisInfo);
-          }
-        }, 300);
-      });
-    }
-  });
-  
-  // También escuchar el evento 'load' por si el DOMContentLoaded se pierde
-  window.addEventListener('load', function() {
-    // Re-inicializar accordion por si acaso
-    const accordionEl = document.getElementById('faqAccordion');
-    if (accordionEl && typeof bootstrap !== 'undefined') {
-      // Bootstrap accordion es idempotente, solo aseguramos que esté activo
-    }
-    
-    // Configurar cierre del widget + WhatsApp automático al cerrar (segunda oportunidad)
-    const widget = document.getElementById('faq-whatsapp-widget');
-    if (!widget) return;
-    
-    const closeBtn = widget.querySelector('#closeFaq');
-    if (closeBtn) {
-      closeBtn.addEventListener('click', function() {
-        widget.classList.remove('opacity-100', 'translate-y-full');
-        widget.classList.add('opacity-0', 'translate-y-full');
-        
-        setTimeout(function() {
-          const paisInfo = detectarPais();
-          if (paisInfo) {
-            abrirWhatsApp(paisInfo);
-          }
-        }, 300);
-      });
-    }
-  });
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', cargarWidget, { once: true });
+  } else {
+    cargarWidget();
+  }
 })();

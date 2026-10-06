@@ -65,6 +65,7 @@ El widget de Preguntas Frecuentes está en la esquina inferior izquierda y prese
 ```
 / (root)
   index.html           ← Landing page principal (1340 líneas)
+  faq-widget.html      ← Marcado HTML independiente del widget FAQ
   Readme.txt           ← Este archivo
   _worker.js           ← Worker Cloudflare para formularios
   
@@ -74,6 +75,7 @@ El widget de Preguntas Frecuentes está en la esquina inferior izquierda y prese
   currency.js          ← Convertidor PEN/USD (exchangeRates, basePrices, updatePrices/)
 
 /assets/
+  css/faq-widget.css   ← Estilos aislados del widget FAQ
   img/                 ← Recursos imágenes
   css/                 ← Estilos custom (hero-sb7, etc.)
   js/                  ← main.js + vendor (AOS, GLightbox)
@@ -99,7 +101,7 @@ git push origin main
 
 - **WhatsApp Ecuador:** +593 0987321055
 - **WhatsApp Perú:** +51 917 955 859
-- **Email:** josephpuero@aol.com
+- **Email:** pucusoft@outlook.com
 
 ---
 

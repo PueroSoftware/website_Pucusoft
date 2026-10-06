@@ -157,26 +157,23 @@ Factor de conversión: **1 USD = 3.7 S/**
 </div>
 ```
 
-## Cómo actualizar manualmente en index.html
+## Cómo actualizar manualmente
 
-Si necesitas modificar el widget directamente en el HTML sin tocar el JavaScript:
-
-1. **Localizar** el bloque `<div id="faq-whatsapp-widget" ...>` en `index.html` (al final, antes de `</body>`)
-2. **Modificar** el contenido de las preguntas (texto entre `<span>...</span>`)
-3. **Modificar** las respuestas (texto entre `<div class="accordion-body">...</div>`)
-4. **Cambiar números** de WhatsApp en el enlace del footer (`href="https://wa.me/5930987321055"` o `href="https://wa.me/51917955859"`)
-5. **Guardar** y hacer `git push origin main` para desplegar en Cloudflare Pages
+1. Editar las preguntas y respuestas en `faq-widget.html`.
+2. Editar los estilos del componente en `assets/css/faq-widget.css`.
+3. Editar el comportamiento del acordeón y WhatsApp en `js/faq-widget.js`.
+4. `index.html` solo contiene el contenedor y las referencias a los tres ficheros del widget.
 
 ## Solución de problemas visuales comunes
 
 | Síntoma | Causa probable | Solución |
 |---------|---------------|----------|
-| Widget se ve "plano"/sin estilo | Clases Bootstrap no cargando o conflicto CSS | Verificar que Bootstrap 5.3 CDN esté en index.html línea 895 |
+| Widget se ve "plano"/sin estilo | La hoja propia no está cargando | Verificar la referencia a `assets/css/faq-widget.css` en `index.html` |
 | Widget muy grande/agrandado | Clases `w-full sm:w-64 md:w-80` muy anchas | Cambiar a `w-64 max-w-sm` o `max-w-md` |
 | Acordeón no abre/ cierra | `data-bs-toggle="collapse"` no funcionando | Asegurar que Bootstrap bundle JS esté cargando (línea 895) |
 | WhatsApp no abre al cerrar | `detectarPais()` fallando | Verificar que el selector `#currency` esté presente en el formulario |
-| Widget aparece y desaparece | `window.addEventListener('load')` conflictos | Revisar que no haya otros scripts con `addEventListener('load')` al final |
+| Widget no aparece | No se pudo cargar el componente HTML | Servir el sitio mediante HTTP y verificar que `faq-widget.html` esté publicado |
 
 ## Respaldo rápido
 
-Si todo falla, el respaldo es tener el widget HTML completo guardado en este `.md` y pegarlo manualmente en `index.html` antes de `</body>`. El widget usa solo clases Bootstrap nativas, por lo que si Bootstrap está cargando, debería verse y funcionar correctamente.
+El widget requiere servirse mediante HTTP/HTTPS porque `faq-widget.js` carga `faq-widget.html` con `fetch`.

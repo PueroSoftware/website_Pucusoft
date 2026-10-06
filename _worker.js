@@ -29,7 +29,7 @@ Mensaje: ${message}`;
           method: 'POST',
           headers: { 'content-type': 'application/json' },
           body: JSON.stringify({
-            personalizations: [{ to: [{ email: 'josephpuero@aol.com' }] }],
+            personalizations: [{ to: [{ email: 'pucusoft@outlook.com' }] }],
             from: { email: 'contacto@pucusoft.pages.dev', name: 'Formulario Web Pucusoft' },
             subject: `Contacto web: ${subject || 'Sin asunto'}`,
             content: [{ type: 'text/plain', value: emailContent }]

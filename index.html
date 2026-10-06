@@ -96,7 +96,7 @@
       }
     ],
     "telephone": ["+593 0987321055", "+51 917 955 859"],
-    "email": "josephpuero@aol.com",
+    "email": "pucusoft@outlook.com",
     "sameAs": [
       "https://www.facebook.com/puerocuerosoft",
       "https://www.instagram.com/pucusoft",
@@ -264,6 +264,7 @@
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/css/faq-widget.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 
@@ -774,7 +775,7 @@
                 <i class="bi bi-envelope"></i>
                 <div>
                   <h4>Email</h4>
-                  <p><a href="mailto:josephpuero@aol.com">josephpuero@aol.com</a></p>
+                  <p><a href="mailto:pucusoft@outlook.com">pucusoft@outlook.com</a></p>
                 </div>
               </div>
               <div class="info-item">
@@ -853,7 +854,7 @@
           <ul>
             <li><a href="https://wa.me/5930987321055"><i class="bi bi-whatsapp"></i> +593 0987321055</a></li>
             <li><a href="https://wa.me/51917955859"><i class="bi bi-whatsapp"></i> +51 917 955 859</a></li>
-            <li><a href="mailto:josephpuero@aol.com"><i class="bi bi-envelope"></i> josephpuero@aol.com</a></li>
+            <li><a href="mailto:pucusoft@outlook.com"><i class="bi bi-envelope"></i> pucusoft@outlook.com</a></li>
           </ul>
         </div>
         <div class="col-lg-3 col-md-4">
@@ -1334,6 +1335,9 @@
     }
   </style>
 
+  <!-- Widget FAQ cargado desde un componente HTML independiente -->
+  <div id="faq-widget-container"></div>
+  <template id="legacy-faq-widget">
   <!-- Widget Preguntas Frecuentes Flotante (Bootstrap nativo) -->
   <div id="faq-whatsapp-widget" class="faq-widget position-fixed bottom-0 start-0 m-4 z-index-1050 min-w-80 max-w-sm w-full sm:w-64 md:w-80 rounded-xl border border-slate-200 shadow-sm shadow-slate-500/10 transition-all duration-300 ease-out opacity-100 transform translate-y-full" aria-hidden="true" aria-label="Preguntas frecuentes" role="dialog">
     <!-- HEADER -->
@@ -1400,6 +1404,7 @@
       </a>
     </div>
   </div>
+  </template>
 
   <!-- Scripts modulares - carga diferida -->
   <script src="js/seo-geo.js" defer></script>
