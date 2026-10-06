@@ -109,8 +109,8 @@
     </div>
   `;
 
-  // Cuando el DOM esté listo, injectar el widget y configurar interacciones
-  document.addEventListener('DOMContentLoaded', function() {
+  // Cuando el DOM y todos los recursos estén listos, injectar el widget y configurar interacciones
+  window.addEventListener('load', function() {
     // Verificar si el widget ya existe (idempotente)
     if (document.getElementById('faq-whatsapp-widget')) {
       return;
