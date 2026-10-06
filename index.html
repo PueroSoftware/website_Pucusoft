@@ -825,6 +825,7 @@
         if (index === 0) basePrice = basePrices.landing;
         else if (index === 1) basePrice = basePrices.corporate;
         else if (index === 2) basePrice = basePrices.store;
+        else if (index === 3) basePrice = 20; // Auditoría $20/hora
 
         const convertedPrice = Math.round(basePrice * rate);
         el.innerHTML = '<sup>' + symbol + '</sup>' + convertedPrice + '<span></span>';
