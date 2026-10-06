@@ -1376,7 +1376,48 @@
   </style>
 
 
-  <!-- LLM Ligero para SEO y Geo-referenciamiento en el Navegador -->
+  <!-- Widget Preguntas Frecuentes + WhatsApp Automático -->
+<div id="faq-whatsapp-widget" class="faq-whatsapp-widget" aria-hidden="true">
+  <div class="faq-widget-header">
+    <h3>¿Dudas Frecuentes?</h3>
+    <button class="faq-close-btn" aria-label="Cerrar preguntas frecuentes">
+      <i class="bi bi-x"></i>
+    </button>
+  </div>
+  <div class="faq-widget-content">
+    <div class="faq-accordion">
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <i class="bi bi-check-circle"></i> ¿Incluye dominio .com?
+        </button>
+        <div class="faq-answer">
+          Sí, dominio .com pagado por 3 años en todos los paquetes.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <i class="bi bi-check-circle"></i> ¿Precios en dólares o soles?
+        </button>
+        <div class="faq-answer">
+          Los precios base son en USD ($240, $400, $750). Puedes cambiar a Soles (S/) con el selector de moneda arriba a la derecha.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <i class="bi bi-check-circle"></i> ¿Entrega la auditoría en cuánto tiempo?
+        </button>
+        <div class="faq-answer">
+          El diagnóstico Express o Avanzado tiene entrega en 3 a 5 días hábiles.
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="faq-widget-footer">
+    <a href="#contacto" class="whatsapp-faq-btn" target="_blank">
+      <i class="bi bi-whatsapp"></i> Contactar por WhatsApp
+    </a>
+  </div>
+</div><!-- LLM Ligero para SEO y Geo-referenciamiento en el Navegador -->
   <script>
     (function() {
       'use strict';
@@ -1441,5 +1482,82 @@
       
     })();
   </script>
+
+  <script>
+    (function() {
+      'use strict';
+      
+      // Configuración de países y WhatsApp
+      const countryWhatsApp = {
+        'PEN': { // Soles = Ecuador
+          phone: '+593 0987321055',
+          name: 'Ecuador'
+        },
+        'USD': { // Dólares = Perú
+          phone: '+51 917 955 859', 
+          name: 'Perú'
+        }
+      };
+      
+      // Detectar país basado en el selector de moneda activo
+      function detectarPais() {
+        const currencySelect = document.getElementById('currency');
+        if (currencySelect) {
+          const selectedValue = currencySelect.value;
+          return countryWhatsApp[selectedValue];
+        }
+        // Fallback: detectar por idioma del navegador
+        const lang = navigator.language.substring(0, 2);
+        if (lang === 'es') {
+          return countryWhatsApp['PEN'];
+        }
+        return null;
+      }
+      
+      // Abrir WhatsApp con número detectado
+      function abrirWhatsApp(paisInfo) {
+        if (paisInfo) {
+          const whatsappUrl = `https://wa.me/${paisInfo.phone.replace('+', '')}?text=Hola%20Pucusoft,%20quiero%20consultar%20por%20un%20proyecto`;
+          window.open(whatsappUrl, '_blank');
+        }
+      }
+      
+      // Manejar cierre del FAQ
+      function manejarCierreFAQ() {
+        const widget = document.getElementById('faq-whatsapp-widget');
+        if (!widget) return;
+        
+        const closeBtn = widget.querySelector('.faq-close-btn');
+        
+        if (closeBtn) {
+          closeBtn.addEventListener('click', function() {
+            // Cerrar widget agregando clase
+            widget.classList.add('faq-closed');
+            widget.setAttribute('aria-hidden', 'true');
+            
+            // Pequeño delay para asegurar que cierre antes de abrir WhatsApp
+            setTimeout(function() {
+              const paisInfo = detectarPais();
+              if (paisInfo) {
+                abrirWhatsApp(paisInfo);
+              }
+            }, 300);
+          });
+        }
+      }
+      
+      // Inicializar
+      manejarCierreFAQ();
+    }
+    
+    // Ejecutar cuando el DOM esté listo
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(manejarCierreFAQ, 100);
+      });
+    } else {
+      manejarCierreFAQ();
+    }
+  })();
+  </script>
 </body>
-</html>
