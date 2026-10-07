@@ -3,31 +3,6 @@
 (function () {
   'use strict';
 
-  const countryWhatsApp = {
-    PEN: { phone: '5930987321055' },
-    USD: { phone: '51917955859' }
-  };
-
-  function detectarPais() {
-    const currencySelect = document.getElementById('currency');
-    if (currencySelect && countryWhatsApp[currencySelect.value]) {
-      return countryWhatsApp[currencySelect.value];
-    }
-
-    return navigator.language.substring(0, 2) === 'es'
-      ? countryWhatsApp.PEN
-      : null;
-  }
-
-  function abrirWhatsApp(paisInfo) {
-    if (!paisInfo) {
-      return;
-    }
-
-    const message = encodeURIComponent('Hola Pucusoft, quiero consultar por un proyecto');
-    window.open(`https://wa.me/${paisInfo.phone}?text=${message}`, '_blank', 'noopener,noreferrer');
-  }
-
   function inicializarWidget(widget) {
     const shell = widget.closest('.faq-widget-shell');
     const openBtn = shell && shell.querySelector('#openFaq');
@@ -42,22 +17,22 @@
       return;
     }
 
+    function cambiarEstado(abierto) {
+      shell.classList.toggle('is-open', abierto);
+      widget.classList.toggle('is-hidden', !abierto);
+      widget.setAttribute('aria-hidden', String(!abierto));
+      openBtn.setAttribute('aria-expanded', String(abierto));
+    }
+
+    cambiarEstado(false);
+
     openBtn.addEventListener('click', function () {
-      shell.classList.add('is-open');
-      openBtn.setAttribute('aria-expanded', 'true');
-      widget.classList.remove('is-hidden');
-      widget.setAttribute('aria-hidden', 'false');
+      cambiarEstado(true);
     });
 
     closeBtn.addEventListener('click', function () {
-      shell.classList.remove('is-open');
-      openBtn.setAttribute('aria-expanded', 'false');
-      widget.classList.add('is-hidden');
-      widget.setAttribute('aria-hidden', 'true');
-
-      window.setTimeout(function () {
-        abrirWhatsApp(detectarPais());
-      }, 300);
+      cambiarEstado(false);
+      openBtn.focus();
     });
   }
 
