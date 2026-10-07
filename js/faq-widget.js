@@ -7,7 +7,12 @@
     const shell = widget.closest('.faq-widget-shell');
     const openBtn = shell && shell.querySelector('#openFaq');
     const accordionEl = widget.querySelector('#faqAccordion');
-    if (accordionEl && typeof bootstrap !== 'undefined') {
+    if (
+      accordionEl
+      && typeof bootstrap !== 'undefined'
+      && bootstrap.Accordion
+      && typeof bootstrap.Accordion.getOrCreateInstance === 'function'
+    ) {
       bootstrap.Accordion.getOrCreateInstance(accordionEl);
     }
 
