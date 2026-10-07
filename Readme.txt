@@ -25,23 +25,6 @@ Pucusoft es una agencia de desarrollo de software especializada en aplicaciones 
 
 ---
 
-## ⭐ Widget FAQ Flotante (modularizado)
-
-El widget de Preguntas Frecuentes está en la esquina inferior izquierda y presenta:
-
-- **Acordeón Bootstrap** con 3 preguntas:
-  - ¿Incluye dominio .com?
-  - ¿Precios en dólares o soles?
-  - ¿Entrega la auditoría en cuánto tiempo?
-- **Burbuja flotante**: el widget inicia minimizado y muestra el panel al pulsar el botón FAQ.
-- **Cierre inteligente**: Al hacer clic en el botón "X", el widget se oculta y se abre automáticamente WhatsApp según la moneda seleccionada:
-  - **PEN (Soles)** → +593 0987321055 (Ecuador)
-  - **USD (Dólares)** → +51 917 955 859 (Perú)
-- **Diseño responsive**: Se adapta a móvil y escritorio usando clases Bootstrap nativas
-- **Animaciones suaves**: Transiciones Bootstrap, hover effects, efecto pulse en el botón de WhatsApp
-
----
-
 ## 🌍 Posicionamiento Geo-referenciado
 
 - **Ruta objetivo:** Machala (Ecuador) - Cañeta (Perú)
@@ -66,17 +49,14 @@ El widget de Preguntas Frecuentes está en la esquina inferior izquierda y prese
 ```
 / (root)
   index.html           ← Landing page principal (1340 líneas)
-  faq-widget.html      ← Marcado HTML independiente del widget FAQ
   Readme.txt           ← Este archivo
   _worker.js           ← Worker Cloudflare para formularios
   
 /js (módulos JS)
-  faq-widget.js        ← Widget FAQ flotante + interacciones (acordeón, close→WhatsApp)
   seo-geo.js           ← Script LLL geo/SEO Machala-Cañete (window.pucusoftSEO / window.pucusoftGeo)
   currency.js          ← Convertidor PEN/USD (exchangeRates, basePrices, updatePrices/)
 
 /assets/
-  css/faq-widget.css   ← Estilos aislados del widget FAQ
   img/                 ← Recursos imágenes
   css/                 ← Estilos custom (hero-sb7, etc.)
   js/                  ← main.js + vendor (AOS, GLightbox)
